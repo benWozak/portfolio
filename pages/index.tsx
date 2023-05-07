@@ -1,5 +1,3 @@
-import fs from 'fs'
-import matter from 'gray-matter'
 import Head from 'next/head'
 import { Flex, useColorMode } from '@chakra-ui/react'
 
@@ -59,7 +57,7 @@ const Home: NextPage<Props> = ({hero, experience, about}) => {
         <meta name='description' content='Web development portfolio' />
         <meta name='viewport' content='width=device-width, minimum-scale=1.0' />
         <link rel='icon' href='/favicon.ico' />
-        <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>
+        <script src='https://identity.netlify.com/v1/netlify-identity-widget.js' async></script>
       </Head>
       <Flex
         direction='column'
