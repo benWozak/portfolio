@@ -19,13 +19,13 @@ import { LinkedInIcon } from 'assets/icons/linkedIn'
 import { TransparentButton } from './buttons/TransparentButton'
 import { NavAnchor } from './NavAnchor'
 
-const NEXT_SERVICE_ID = process.env.NEXT_SERVICE_ID;
-const NEXT_TEMPLATE_ID = process.env.NEXT_TEMPLATE_ID;
-const NEXT_PUBLIC_KEY = process.env.NEXT_PUBLIC_KEY;
+const NEXT_SERVICE_ID = process.env.NEXT_SERVICE_ID
+const NEXT_TEMPLATE_ID = process.env.NEXT_TEMPLATE_ID
+const NEXT_PUBLIC_KEY = process.env.NEXT_PUBLIC_KEY
 
 interface AlertProps {
-  trigger: boolean,
-  status: "success" | "info" | "warning" | "error" | "loading" | undefined,
+  trigger: boolean
+  status: 'success' | 'info' | 'warning' | 'error' | 'loading' | undefined
   message: string
 }
 
@@ -34,33 +34,45 @@ export const Contact = () => {
   const [alert, setAlert] = React.useState<AlertProps>({
     trigger: false,
     status: undefined,
-    message: ''
+    message: '',
   })
 
-  function handleAlert(status: "success" | "error" | undefined) {
+  function handleAlert(status: 'success' | 'error' | undefined) {
     setAlert({
       trigger: true,
       status: status,
-      message: status === 'success' ?  'Message Sent.' : 'Unable to send. Please try again later.'
+      message:
+        status === 'success'
+          ? 'Message Sent.'
+          : 'Unable to send. Please try again later.',
     })
     setTimeout(() => {
       setAlert({
         trigger: false,
         status: undefined,
-        message: ''
+        message: '',
       })
     }, 3000)
   }
 
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if(NEXT_SERVICE_ID && NEXT_TEMPLATE_ID && NEXT_PUBLIC_KEY) {
-      emailjs.sendForm(NEXT_SERVICE_ID, NEXT_TEMPLATE_ID, e.currentTarget, NEXT_PUBLIC_KEY)
-      .then(() => {
-        handleAlert('success')
-      }, () => {
-        handleAlert('error')
-      });
+    e.preventDefault()
+    if (NEXT_SERVICE_ID && NEXT_TEMPLATE_ID && NEXT_PUBLIC_KEY) {
+      emailjs
+        .sendForm(
+          NEXT_SERVICE_ID,
+          NEXT_TEMPLATE_ID,
+          e.currentTarget,
+          NEXT_PUBLIC_KEY
+        )
+        .then(
+          () => {
+            handleAlert('success')
+          },
+          () => {
+            handleAlert('error')
+          }
+        )
       e.currentTarget.reset()
     } else {
       handleAlert('error')
@@ -69,39 +81,39 @@ export const Contact = () => {
 
   return (
     <Flex
-      align='center'
-      justify='center'
-      direction='column'
+      align="center"
+      justify="center"
+      direction="column"
       w={{ base: '85%', sm: '80%', md: '30rem' }}
-      mx='auto'
-      gap='1.5rem'
-      mb='2rem'
-      pb='2rem'
-      mt='4rem'
+      mx="auto"
+      gap="1.5rem"
+      mb="2rem"
+      pb="2rem"
+      mt="4rem"
       sx={{
         '& form': {
           width: '100%',
         },
       }}
     >
-      <NavAnchor id='contact' />
+      <NavAnchor id="contact" />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <Flex alignItems='center'>
+        <Flex alignItems="center">
           <Flex
             w={{ base: '2rem', md: '3rem' }}
-            h='1px'
-            bg='mainColor'
-            mb='1.5rem'
+            h="1px"
+            bg="mainColor"
+            mb="1.5rem"
             mr={{ base: '1rem', md: '2rem' }}
           />
           <Heading
-            as='h2'
-            mb='2rem'
+            as="h2"
+            mb="2rem"
             fontSize={{
               base: '2rem !important',
               sm: '2rem !important',
@@ -113,9 +125,9 @@ export const Contact = () => {
           </Heading>
           <Flex
             w={{ base: '2rem', md: '3rem' }}
-            h='1px'
-            bg='mainColor'
-            mb='1.5rem'
+            h="1px"
+            bg="mainColor"
+            mb="1.5rem"
             ml={{ base: '1rem', md: '2rem' }}
           />
         </Flex>
@@ -127,53 +139,53 @@ export const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <FormControl isRequired mb='1.5rem'>
+          <FormControl isRequired mb="1.5rem">
             <FormLabel>Name</FormLabel>
             <Input
-              type='text'
+              type="text"
               id="from_name"
-              name="from_name" 
-              borderColor='inputBorder'
+              name="from_name"
+              borderColor="inputBorder"
               _hover={{
                 borderColor: 'inputBorderHover',
               }}
-              focusBorderColor='rgba(42, 142, 139, 0.7)'
+              focusBorderColor="rgba(42, 142, 139, 0.7)"
               backdropFilter={colorMode === 'light' ? 'blur(24px)' : ''}
             />
           </FormControl>
-          <FormControl isRequired mb='1.5rem'>
+          <FormControl isRequired mb="1.5rem">
             <FormLabel>Email</FormLabel>
             <Input
-              type='email'
-              name='user_email'
-              borderColor='inputBorder'
+              type="email"
+              name="user_email"
+              borderColor="inputBorder"
               _hover={{
                 borderColor: 'inputBorderHover',
               }}
-              focusBorderColor='rgba(42, 142, 139, 0.7)'
+              focusBorderColor="rgba(42, 142, 139, 0.7)"
               backdropFilter={colorMode === 'light' ? 'blur(24px)' : ''}
             />
           </FormControl>
-          <FormControl isRequired mb='2rem'>
+          <FormControl isRequired mb="2rem">
             <FormLabel>Message</FormLabel>
             <Textarea
-              name='message'
+              name="message"
               rows={6}
-              resize='none'
-              borderColor='inputBorder'
+              resize="none"
+              borderColor="inputBorder"
               _hover={{
                 borderColor: 'inputBorderHover',
               }}
-              focusBorderColor='rgba(42, 142, 139, 0.7)'
+              focusBorderColor="rgba(42, 142, 139, 0.7)"
               backdropFilter={colorMode === 'light' ? 'blur(24px)' : ''}
             />
           </FormControl>
-          <Flex w='100%' justify='center' mt='3rem'>
-            <TransparentButton text='Get in touch' type='submit' />
+          <Flex w="100%" justify="center" mt="3rem">
+            <TransparentButton text="Get in touch" type="submit" />
           </Flex>
         </motion.div>
       </form>
-      {alert.trigger && 
+      {alert.trigger && (
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -186,48 +198,48 @@ export const Contact = () => {
             {alert.message}
           </Alert>
         </motion.div>
-      }
-      
-      <Flex justify='center' alignItems='center' gap='0.4rem' mt='1.5rem'>
+      )}
+
+      <Flex justify="center" alignItems="center" gap="0.4rem" mt="1.5rem">
         <Link
-          href='https://github.com/benWozak'
+          href="https://github.com/benWozak"
           isExternal
-          width='3rem'
-          fill='githubIcon'
+          width="3rem"
+          fill="githubIcon"
           _hover={{
             '& *': {
               fill: 'rgb(255,255,255,0.9)',
             },
           }}
-          transition='0.3s'
+          transition="0.3s"
           sx={{
             '& *': {
               fill: 'rgb(255,255,255,0.6)',
             },
           }}
         >
-          <Flex width='2.6rem'>
+          <Flex width="2.6rem">
             <Icon as={GithubIcon} />
           </Flex>
         </Link>
         <Link
-          href='https://ca.linkedin.com/in/ben-wozak'
+          href="https://ca.linkedin.com/in/ben-wozak"
           isExternal
-          width='3rem'
-          fill='LinkedInIcon'
+          width="3rem"
+          fill="LinkedInIcon"
           _hover={{
             '& *': {
               fill: 'rgb(255,255,255,0.9)',
             },
           }}
-          transition='0.3s'
+          transition="0.3s"
           sx={{
             '& *': {
               fill: 'rgb(255,255,255,0.6)',
             },
           }}
         >
-          <Flex width='2.6rem'>
+          <Flex width="2.6rem">
             <Icon as={LinkedInIcon} />
           </Flex>
         </Link>

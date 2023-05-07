@@ -8,22 +8,22 @@ export const TransparentButton = ({ text, type }: ButtonProps) => {
   const { colorMode } = useColorMode()
   return (
     <Button
-      w='15rem'
-      borderWidth='1px'
-      borderStyle='solid'
-      borderColor='coloredBorder'
-      h='3.5rem'
-      alignItems='center'
-      borderRadius='5px'
+      w="15rem"
+      borderWidth="1px"
+      borderStyle="solid"
+      borderColor="coloredBorder"
+      h="3.5rem"
+      alignItems="center"
+      borderRadius="5px"
       _hover={{ bg: 'transparentButtonHover' }}
-      transition='0.2s'
-      cursor='pointer'
+      transition="0.2s"
+      cursor="pointer"
       color="coloredButton"
       _active={{ bg: 'transparentButtonActive' }}
       backdropFilter={colorMode === 'light' ? 'blur(24px)' : ''}
       type={type}
-      bg='none'
-      fontWeight='400'
+      bg="none"
+      fontWeight="400"
     >
       {text}
     </Button>

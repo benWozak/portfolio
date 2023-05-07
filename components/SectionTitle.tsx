@@ -16,30 +16,32 @@ export const SectionTitle = ({ title }: SectionTitleProps) => {
     >
       <Flex
         justify={{ base: 'center', xl: 'flex-start' }}
-        alignItems='center'
-        gap='2rem'
-        mb='4rem'
-        direction='row'
+        alignItems="center"
+        gap="2rem"
+        mb="4rem"
+        direction="row"
         pl={{ base: '0%', xl: '7%', '2xl': '12%', '3xl': '13%' }}
       >
-        <Flex w={{ base: '2rem', md: '3rem' }} h='1px' bg='mainColor' />
+        <Flex w={{ base: '2rem', md: '3rem' }} h="1px" bg="mainColor" />
         <Heading
-          as='h2'
+          as="h2"
           fontSize={{
             base: '2rem !important',
             sm: '2rem !important',
             md: '2.8rem !important',
             lg: '3rem !important',
           }}
-          textAlign='center'
+          textAlign="center"
           mx={{ base: '-1rem', sm: 'unset' }}
         >
-          {title === 'My recent projects' && isSmallerThan768 ? 'My projects' : title}
+          {title === 'My recent projects' && isSmallerThan768
+            ? 'My projects'
+            : title}
         </Heading>
         <Flex
           w={{ base: '2rem', md: '3rem' }}
-          h='1px'
-          bg='mainColor'
+          h="1px"
+          bg="mainColor"
           display={{ base: 'flex', md: 'flex', xl: 'none' }}
         />
       </Flex>

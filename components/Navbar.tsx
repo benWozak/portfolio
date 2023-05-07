@@ -14,18 +14,18 @@ interface NavbarItemProps {
 const NavbarItem = ({ text, color, path, isActive }: NavbarItemProps) => (
   <Link _hover={{ textDecoration: 'none' }} href={path}>
     <Text
-      w='8rem'
-      variant='navbarItem'
-      textTransform='uppercase'
-      fontWeight='400'
-      letterSpacing='3px'
-      fontSize='0.9rem'
+      w="8rem"
+      variant="navbarItem"
+      textTransform="uppercase"
+      fontWeight="400"
+      letterSpacing="3px"
+      fontSize="0.9rem"
       color={isActive ? 'mainColor' : color}
       _hover={{
         color: 'coloredText',
       }}
-      cursor='pointer'
-      transition='0.2s'
+      cursor="pointer"
+      transition="0.2s"
     >
       {text}
     </Text>
@@ -80,20 +80,20 @@ export const Navbar = () => {
 
   return (
     <Flex
-      w='14rem'
-      position='fixed'
-      left='0'
-      top='0'
-      direction='column'
-      justify='center'
-      alignItems='flex-start'
-      borderWidth='0 1px 0 0'
-      borderStyle='solid'
-      borderColor='grayBorder'
-      h='100%'
-      pb='6rem'
-      pl='3.5rem'
-      bg='secondaryBackround'
+      w="14rem"
+      position="fixed"
+      left="0"
+      top="0"
+      direction="column"
+      justify="center"
+      alignItems="flex-start"
+      borderWidth="0 1px 0 0"
+      borderStyle="solid"
+      borderColor="grayBorder"
+      h="100%"
+      pb="6rem"
+      pl="3.5rem"
+      bg="secondaryBackround"
       display={{ base: 'none', lg: 'flex' }}
       backdropFilter={'blur(24px)'}
     >
@@ -108,7 +108,7 @@ export const Navbar = () => {
               <Icon as={MainLogo} />
             </Flex>
           </Link> */}
-          <Flex gap='1.5rem' direction='column' alignItems='flex-start'>
+          <Flex gap="1.5rem" direction="column" alignItems="flex-start">
             {navItems.map((navItem, index) => (
               <NavbarItem
                 key={index}
@@ -125,21 +125,21 @@ export const Navbar = () => {
 }
 
 const MobileNavbarItem = ({ text, color, path, onClick }: NavbarItemProps) => (
-  <Flex w='100%' justify='center' textAlign='center' alignItems='center'>
+  <Flex w="100%" justify="center" textAlign="center" alignItems="center">
     <Link _hover={{ textDecoration: 'none' }} href={path} onClick={onClick}>
       <Text
-        w='12rem'
-        variant='navbarItem'
-        textTransform='uppercase'
-        fontWeight='400'
-        letterSpacing='3px'
-        fontSize='1.3rem'
+        w="12rem"
+        variant="navbarItem"
+        textTransform="uppercase"
+        fontWeight="400"
+        letterSpacing="3px"
+        fontSize="1.3rem"
         color={color}
         _hover={{
           color: 'coloredText',
         }}
-        cursor='pointer'
-        transition='0.2s'
+        cursor="pointer"
+        transition="0.2s"
       >
         {text}
       </Text>
@@ -180,50 +180,50 @@ export const MobileNavbar = () => {
   return (
     <>
       <Flex
-        w='100%'
-        h='5rem'
-        bg='secondaryBackround'
-        justify='space-between'
+        w="100%"
+        h="5rem"
+        bg="secondaryBackround"
+        justify="space-between"
         display={{ base: 'flex', lg: 'none' }}
-        position='fixed'
-        top='0'
-        left='0'
-        pr='1.5rem'
-        pl='0.8rem'
-        py='0.3rem'
-        alignItems='center'
-        zIndex='999'
+        position="fixed"
+        top="0"
+        left="0"
+        pr="1.5rem"
+        pl="0.8rem"
+        py="0.3rem"
+        alignItems="center"
+        zIndex="999"
         backdropFilter={'blur(24px)'}
-        borderWidth='0 0 1px 0'
-        borderStyle='solid'
-        borderColor='mobileNavbarBorder'
-        maxW='100vw'
+        borderWidth="0 0 1px 0"
+        borderStyle="solid"
+        borderColor="mobileNavbarBorder"
+        maxW="100vw"
       >
         {/* <Link py='0.5rem' href='#home'>
           <Icon as={MainLogo} />
         </Link> */}
         <Flex
-          w='2.7rem'
-          h='3rem'
-          bg='hamburgerBg'
-          borderStyle='solid'
-          borderWidth='1px'
-          borderColor='rgb(255,255,255,0.2)'
-          borderRadius='6px'
-          justify='center'
-          alignItems='center'
-          direction='column'
-          gap='0.35rem'
-          cursor='pointer'
+          w="2.7rem"
+          h="3rem"
+          bg="hamburgerBg"
+          borderStyle="solid"
+          borderWidth="1px"
+          borderColor="rgb(255,255,255,0.2)"
+          borderRadius="6px"
+          justify="center"
+          alignItems="center"
+          direction="column"
+          gap="0.35rem"
+          cursor="pointer"
           _hover={{ bg: 'rgb(255,255,255,0.05)' }}
-          transition='0.2s'
+          transition="0.2s"
           _active={{ bg: 'rgb(255,255,255,0.05)' }}
           onClick={() => setIsOpen(!isOpen)}
-          zIndex='99999'
+          zIndex="99999"
         >
-          <Flex w='1.3rem' h='1px' bg='rgb(255,255,255,0.5)'></Flex>
-          <Flex w='1.3rem' h='1px' bg='rgb(255,255,255,0.5)'></Flex>
-          <Flex w='1.3rem' h='1px' bg='rgb(255,255,255,0.5)'></Flex>
+          <Flex w="1.3rem" h="1px" bg="rgb(255,255,255,0.5)"></Flex>
+          <Flex w="1.3rem" h="1px" bg="rgb(255,255,255,0.5)"></Flex>
+          <Flex w="1.3rem" h="1px" bg="rgb(255,255,255,0.5)"></Flex>
         </Flex>
       </Flex>
       {isOpen && (
@@ -234,21 +234,21 @@ export const MobileNavbar = () => {
           exit={{ opacity: 0 }}
         >
           <Flex
-            gap='1.5rem'
-            direction='column'
-            alignItems='flex-start'
-            w='100%'
-            h='100%'
-            bg='hamburgerBg'
-            position='fixed'
-            top='5rem'
-            left='0'
-            borderStyle='solid'
-            borderWidth='1px 0 0 0'
-            borderColor='rgb(255,255,255,0.1)'
-            pt='2rem'
+            gap="1.5rem"
+            direction="column"
+            alignItems="flex-start"
+            w="100%"
+            h="100%"
+            bg="hamburgerBg"
+            position="fixed"
+            top="5rem"
+            left="0"
+            borderStyle="solid"
+            borderWidth="1px 0 0 0"
+            borderColor="rgb(255,255,255,0.1)"
+            pt="2rem"
             display={{ base: 'flex', lg: 'none' }}
-            zIndex='99'
+            zIndex="99"
             backdropFilter={'blur(24px)'}
           >
             {mobileNavItems.map((mobileNavItem, index) => (

@@ -45,15 +45,15 @@ const projectsData = [
 export const Projects = () => {
   return (
     <>
-      <NavAnchor id='projects' />
-      <SectionTitle title='My recent projects' />
-      <Flex w='100%' justify='center' alignItems='center' mt='1.5rem' mb='2rem'>
+      <NavAnchor id="projects" />
+      <SectionTitle title="My recent projects" />
+      <Flex w="100%" justify="center" alignItems="center" mt="1.5rem" mb="2rem">
         <Flex
-          w='100%'
-          wrap='nowrap'
-          justify='flex-start'
-          alignItems='center'
-          direction='column'
+          w="100%"
+          wrap="nowrap"
+          justify="flex-start"
+          alignItems="center"
+          direction="column"
           gap={{ base: '0rem', md: '3rem' }}
           px={{ sm: '1rem', '2xl': '5rem' }}
         >

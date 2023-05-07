@@ -1,39 +1,39 @@
-import type { ComponentStyleConfig } from "@chakra-ui/react";
+import type { ComponentStyleConfig } from '@chakra-ui/react'
 
 export const Text: ComponentStyleConfig = {
   variants: {
     navbarItem: {
       fontWeight: 500,
-      letterSpacing: "1px"
+      letterSpacing: '1px',
     },
     paragraph: {
-      fontSize: "1.1rem",
+      fontSize: '1.1rem',
       fontWeight: 400,
-      color: "primaryText",
-      letterSpacing: "0.5px"
+      color: 'primaryText',
+      letterSpacing: '0.5px',
     },
     paragraphLarge: {
-      fontSize: "1.2rem",
+      fontSize: '1.2rem',
       fontWeight: 400,
-      color: "primaryText",
-      letterSpacing: "0.1px"
+      color: 'primaryText',
+      letterSpacing: '0.1px',
     },
     paragraphSecondary: {
-      fontSize: "1.1rem",
+      fontSize: '1.1rem',
       fontWeight: 400,
-      color: "secondaryText",
-      letterSpacing: "0.5px"
+      color: 'secondaryText',
+      letterSpacing: '0.5px',
     },
     experienceSubTitle: {
       fontWeight: 600,
-      fontSize: "1.2rem",
-      color: "secondaryText"
+      fontSize: '1.2rem',
+      color: 'secondaryText',
     },
     titleColored: {
       fontWeight: 700,
-      fontSize: "3.8rem",
-      color: "mainColor",
-      letterSpacing: "1px",
+      fontSize: '3.8rem',
+      color: 'mainColor',
+      letterSpacing: '1px',
     },
   },
-};
+}

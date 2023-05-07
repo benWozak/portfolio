@@ -47,26 +47,29 @@ type AboutAttributes = {
   }
 }
 
-const Home: NextPage<Props> = ({hero, experience, about}) => {
+const Home: NextPage<Props> = ({ hero, experience, about }) => {
   const { colorMode } = useColorMode()
 
   return (
     <>
       <Head>
         <title>Ben Wozak Portfolio</title>
-        <meta name='description' content='Web development portfolio' />
-        <meta name='viewport' content='width=device-width, minimum-scale=1.0' />
-        <link rel='icon' href='/favicon.ico' />
-        <script src='https://identity.netlify.com/v1/netlify-identity-widget.js' async></script>
+        <meta name="description" content="Web development portfolio" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+        <script
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          async
+        ></script>
       </Head>
       <Flex
-        direction='column'
+        direction="column"
         pl={{ base: '0vw', md: '0vw', lg: '13rem' }}
         bgImage={colorMode === 'light' ? 'url(mountains.jpg)' : ''}
-        bgRepeat='no-repeat'
-        bgAttachment='fixed'
-        bgSize='cover'
-        transition='0.5s'
+        bgRepeat="no-repeat"
+        bgAttachment="fixed"
+        bgSize="cover"
+        transition="0.5s"
       >
         <Navbar />
         <MobileNavbar />
@@ -85,11 +88,13 @@ export const getStaticProps: GetStaticProps = async () => {
   const hero = await import(`../content/${'hero'}.md`)
   const experince = await import(`../content/${'experience'}.md`)
   const about = await import(`../content/${'about.md'}`)
-  return { props: { 
-    hero: hero.default,
-    experience: experince.default,
-    about: about.default,
-  } }
+  return {
+    props: {
+      hero: hero.default,
+      experience: experince.default,
+      about: about.default,
+    },
+  }
 }
 
 export default Home

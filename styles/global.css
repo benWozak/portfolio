@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap');
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    max-width: 100vw; 
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+}
