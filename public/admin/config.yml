@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+local_backend: true
+media_folder: public/img
+public_folder: img
+collections:
+  - name: "sections"
+    label: "Sections"
+    files:
+    - label: "Hero"
+      name: "hero"
+      file: "content/hero.md"
+      fields:
+        - {label: "Line 1 (Small)", name: "hero_prefix", widget: "string"}
+        - {label: "Line 2 (Primary)", name: "hero_title", widget: "string"}
+        - {label: "Line 3 (Secondary)", name: "hero_title_secondary", widget: "string"}
+        - {label: "Sub Text", name: "hero_description", widget: "markdown"}
+    - label: "Experience"
+      name: "experience"
+      file: "content/experience.md"
+      fields:
+        - label: 'Entries'
+          name: "entries"
+          widget: list
+          fields:
+            - {label: "Job Title", name: "title", widget: "string"}
+            - {label: "Employer", name: "employer", widget: "string"}
+            - {label: "Employer Website", name: "employer_website", widget: "string"}
+            - {label: "Display Date", name: "date", widget: "string"}
+            - {label: "Location", name: "location", widget: "string"}
+            - {label: "Decription Points", name: "description", widget: "list", field: {label: Item, name: item, widget: text}}
+    - label: "About"
+      name: "about"
+      file: "content/about.md"
+      fields:
+        - {label: "Photo", name: "photo", widget: "image", media_folder: public/img, public_folder: img}
+        - {label: "About Me Description", name: "description", widget: "markdown"}
+        - {label: "Skills", name: "skills", widget: "list", field: {label: "Skill", name: "skill", widget: string}}
+    
