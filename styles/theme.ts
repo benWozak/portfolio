@@ -1,16 +1,12 @@
-import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 import { colors } from './colors'
 import { Headings } from './components/heading'
 import { Text } from './components/text'
 import { Tabs } from './components/Tabs'
 
-const config: ThemeConfig = {
+const theme = extendTheme({
   initialColorMode: 'dark',
   useSystemColorMode: false,
-}
-
-const theme = extendTheme({
-  config,
   breakpoints: {
     sm: '30em', // 480px
     md: '48em', // 768px

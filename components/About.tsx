@@ -170,7 +170,7 @@ export const About = (props: Props) => {
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
-                  a: (props) => {
+                  a: (props: any) => {
                     return (
                       <Link
                         href={props.href}

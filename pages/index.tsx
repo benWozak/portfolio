@@ -47,8 +47,9 @@ type AboutAttributes = {
   }
 }
 
-const Home: NextPage<Props> = ({ hero, experience, about }) => {
+const Home: NextPage<Props> = (props: Props) => {
   const { colorMode } = useColorMode()
+  const { hero, experience, about } = props
 
   return (
     <>

@@ -1,6 +1,4 @@
-import type { ComponentStyleConfig } from '@chakra-ui/react'
-
-export const Text: ComponentStyleConfig = {
+export const Text = {
   variants: {
     navbarItem: {
       fontWeight: 500,
