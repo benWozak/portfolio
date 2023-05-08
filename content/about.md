@@ -1,24 +1,14 @@
 ---
 photo: img/me.png
-description: Donec sollicitudin, sem quis sodales consectetur, sem tortor
-  laoreet tellus, nec malesuada augue libero quis enim. Duis sed sem porttitor
-  ante blandit euismod. Mauris maximus sem eget lorem eleifend dapibus. Donec
-  luctus et ante eget iaculis. Vivamus imperdiet justo nec nunc pulvinar
-  gravida. Aenean vestibulum, nisl sit amet tincidunt bibendum, augue erat
-  iaculis ipsum, eget dictum mauris arcu eu diam. Donec ut finibus justo.
-  Vivamus tristique nec metus eu scelerisque. Integer lacus elit, euismod nec
-  turpis ac, aliquam dapibus dui. Aliquam pharetra elementum metus id eleifend.
-  Etiam diam lectus, dapibus nec imperdiet eu, malesuada ultricies diam. Mauris
-  ex felis, tempor dignissim rutrum non, accumsan ullamcorper massa. Vestibulum
-  luctus justo ac vehicula euismod. Aliquam auctor rhoncus dolor eget lacinia.
-  Pellentesque vitae [leo sed risus dapibus
-  semper.](https://www.lipsum.com/feed/html)
-skills:
-  - Javascript
-  - Typescript
-  - React
-  - Nextjs
-  - Decap CMS
-  - NodeJS
-  - VueJs
+description: >-
+  My journey as a **Software Developer** started in 2016 when I decided to leave
+  my career in the culinary industry to pursue something more in-line with my
+  values and engage with my desire to solve complex problems and contribute
+  something meaningful to the world. This led me to [The Southern Alberta
+  Institute of Technology](https://www.sait.ca/) where I discovered a passion
+  for front-end development. 
+
+
+  I﻿ was hired immediately out graduation and have been working ever since. I'm currently employed at [chata.ai](https://chata.ai/) where I contribute to a suite of tools and interfaces to interact with our proprietary Natural Language Processing AI/ML SaaS products.
+skills: []
 ---
