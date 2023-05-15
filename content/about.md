@@ -1,5 +1,5 @@
 ---
-photo: img/me.png
+photo: img/me-2.png
 description: >-
   My journey as a **Software Developer** started in 2016 when I decided to leave
   my career in the culinary industry to pursue something more in-line with my
