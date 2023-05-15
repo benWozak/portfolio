@@ -9,6 +9,6 @@ description: >-
   for front-end development. 
 
 
-  I﻿ was hired immediately out graduation and have been working ever since. I'm currently employed at [chata.ai](https://chata.ai/) where I contribute to a suite of tools and interfaces to interact with our proprietary Natural Language Processing AI/ML SaaS products.
+  I﻿ was hired immediately out graduation and have been working ever since. I'm currently employed at [chata.ai](https://chata.ai/) where I contribute to a suite of tools and interfaces to interact with a line of proprietary Natural Language Processing AI/ML SaaS products.
 skills: []
 ---
