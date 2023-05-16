@@ -40,6 +40,7 @@ interface SkillBoxProps {
 export const About = (props: Props) => {
   const { content } = props
   const windowSize = useWindowSize()
+  console.log(content.photo)
 
   const skillsList = [
     {
@@ -151,6 +152,7 @@ export const About = (props: Props) => {
                 <Image
                   borderRadius="full"
                   boxSize="250px"
+                  objectFit="contain"
                   src={content.photo}
                   fallbackSrc="https://via.placeholder.com/150"
                   alt="Ben Wozak"

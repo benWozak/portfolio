@@ -48,7 +48,7 @@ export const Hero = (props: Props) => {
               <Text
                 as="h1"
                 variant="titleColored"
-                fontSize={{ base: '3rem', md: '3.5rem', xl: '3.8rem' }}
+                fontSize={{ base: '4rem', md: '4.5rem', xl: '4.8rem' }}
                 lineHeight="54px"
               >
                 {content.hero_title}
@@ -73,7 +73,7 @@ export const Hero = (props: Props) => {
                 variant="secondaryText"
                 mb="2rem"
                 maxW="45rem"
-                fontSize={{ base: '1rem', xl: '1.1rem' }}
+                fontSize={{ base: '1.1rem', xl: '1.6rem' }}
               >
                 {content.hero_description}
               </Text>
