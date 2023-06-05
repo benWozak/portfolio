@@ -5,12 +5,12 @@ entries:
     date: 09/2019 – present
     location: Calgary AB, Canada
     description:
-      - Lead a team of front and backend engineers using agile methodology to
-        maintain product deliverables and a strong sprint velocity.
-      - Designed, developed and shipped multiple fully complete applications
-        from the ground up including two API management portals, a Microsoft
-        teams app integration and a workbench for creating AI trained data
-        language models.
+      - Designed and Developed two API management portals for complex SaaS
+        products.
+      - Designed and Developed a user portal and an app extension for Microsoft
+        teams that support hundreds of users.
+      - Lead a team of engineers using agile methodology to maintain product
+        deliverables and a strong sprint velocity.
       - Lead regular guild meetings with other front-end developers to discuss
         current technologies and set uniform standards around development
         procedures which lead to the company wide adoption of TypeScript.
