@@ -30,7 +30,13 @@ interface AlertProps {
 }
 
 export const Contact = () => {
+  const form = React.useRef<any>()
   const { colorMode } = useColorMode()
+  const [contact, setContact] = React.useState({
+    from_name: '',
+    user_email: '',
+    message: '',
+  })
   const [alert, setAlert] = React.useState<AlertProps>({
     trigger: false,
     status: undefined,
@@ -55,6 +61,13 @@ export const Contact = () => {
     }, 3000)
   }
 
+  const handleForm = (e: any) => {
+    setContact({
+      ...contact,
+      [e.target.name]: e.target.value,
+    })
+  }
+
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (NEXT_SERVICE_ID && NEXT_TEMPLATE_ID && NEXT_PUBLIC_KEY) {
@@ -62,7 +75,7 @@ export const Contact = () => {
         .sendForm(
           NEXT_SERVICE_ID,
           NEXT_TEMPLATE_ID,
-          e.currentTarget,
+          form.current,
           NEXT_PUBLIC_KEY
         )
         .then(
@@ -132,7 +145,7 @@ export const Contact = () => {
           />
         </Flex>
       </motion.div>
-      <form onSubmit={handleOnSubmit}>
+      <form ref={form} onSubmit={handleOnSubmit}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -145,6 +158,7 @@ export const Contact = () => {
               type="text"
               id="from_name"
               name="from_name"
+              onChange={handleForm}
               borderColor="inputBorder"
               _hover={{
                 borderColor: 'inputBorderHover',
@@ -158,6 +172,7 @@ export const Contact = () => {
             <Input
               type="email"
               name="user_email"
+              onChange={handleForm}
               borderColor="inputBorder"
               _hover={{
                 borderColor: 'inputBorderHover',
@@ -170,6 +185,7 @@ export const Contact = () => {
             <FormLabel>Message</FormLabel>
             <Textarea
               name="message"
+              onChange={handleForm}
               rows={6}
               resize="none"
               borderColor="inputBorder"

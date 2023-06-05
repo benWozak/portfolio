@@ -35,29 +35,32 @@ interface SkillBoxProps {
   title: string
   text: string
   logoList: React.FC<React.SVGProps<SVGSVGElement>>[]
+  show: boolean
 }
 
 export const About = (props: Props) => {
   const { content } = props
   const windowSize = useWindowSize()
-  console.log(content.photo)
 
   const skillsList = [
     {
       title: 'Front-end Focus',
       text: 'Specializing in ReactJS, Typescript and NextJS, I build high-quality web applications that are tailored to your needs.',
       logoList: [ReactIcon, TypescriptIcon, CssIcon],
+      show: content.showFE,
     },
     {
       title: 'Full Stack Development',
       text: 'Object-Oriented PRograming using MERN or PERN stack: ReactJS, NodeJs, ExpressJS, MongoDB or Postrgres',
       logoList: [ReactIcon, NodeIcon, MongoIcon],
+      show: content.showFS,
     },
-    {
-      title: 'Mobile applications',
-      text: 'Using React-Native and Progressive Web App for cross-platform compatability.',
-      logoList: [ReactIcon, AppleIcon, AndroidIcon],
-    },
+    // {
+    //   title: 'Mobile applications',
+    //   text: 'Using React-Native and Progressive Web App for cross-platform compatability.',
+    //   logoList: [ReactIcon, AppleIcon, AndroidIcon],
+    //   show: content.showMB
+    // },
   ]
 
   const SkillBox = ({ title, text, logoList }: SkillBoxProps) => {
@@ -205,20 +208,25 @@ export const About = (props: Props) => {
           wrap={{ base: 'wrap', md: 'wrap', xl: 'wrap', '2xl': 'nowrap' }}
           mt="2rem"
         >
-          {skillsList.map((service, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.8, delay: 0.3 * index }}
-              key={`${service.title}-${index}`}
-            >
-              <SkillBox
-                title={service.title}
-                text={service.text}
-                logoList={service.logoList}
-              />
-            </motion.div>
+          {skillsList.map((service, index, show) => (
+            <>
+              {show ? (
+                <motion.div
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.8, delay: 0.3 * index }}
+                  key={`${service.title}-${index}`}
+                >
+                  <SkillBox
+                    title={service.title}
+                    text={service.text}
+                    logoList={service.logoList}
+                    show={service.show}
+                  />
+                </motion.div>
+              ) : null}
+            </>
           ))}
         </Flex>
       </Flex>

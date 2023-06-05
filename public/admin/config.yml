@@ -60,8 +60,20 @@ collections:
               widget: 'markdown',
             }
           - {
-              label: 'Skills',
-              name: 'skills',
-              widget: 'list',
-              field: { label: 'Skill', name: 'skill', widget: string },
+              label: 'Show Front End',
+              name: 'showFE',
+              widget: 'boolean',
+              default: true,
+            }
+          - {
+              label: 'Show Full Stack',
+              name: 'showFS',
+              widget: 'boolean',
+              default: true,
+            }
+          - {
+              label: 'Show Mobile',
+              name: 'showMB',
+              widget: 'boolean',
+              default: false,
             }
