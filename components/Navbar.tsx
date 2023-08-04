@@ -22,7 +22,7 @@ const NavbarItem = ({ text, color, path, isActive }: NavbarItemProps) => (
       fontSize="0.9rem"
       color={isActive ? 'mainColor' : color}
       _hover={{
-        color: 'coloredText',
+        color: 'mainColor',
       }}
       cursor="pointer"
       transition="0.2s"
@@ -136,7 +136,7 @@ const MobileNavbarItem = ({ text, color, path, onClick }: NavbarItemProps) => (
         fontSize="1.3rem"
         color={color}
         _hover={{
-          color: 'coloredText',
+          color: 'mainColor',
         }}
         cursor="pointer"
         transition="0.2s"
@@ -152,7 +152,7 @@ export const MobileNavbar = () => {
   const mobileNavItems = [
     {
       text: 'Home',
-      color: 'coloredText',
+      color: 'mainColor',
       path: '#home',
       onClick: () => setIsOpen(false),
     },

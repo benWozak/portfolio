@@ -175,7 +175,7 @@ export const ProjectItem = ({
               borderWidth="0px"
               borderStyle="solid"
               borderColor="mainColor"
-              bg="coloredButton"
+              bg="mainColor"
             >
               <Flex
                 w="100%"
@@ -200,7 +200,7 @@ export const ProjectItem = ({
                 borderRadius="5px"
                 borderWidth="1px"
                 borderStyle="solid"
-                borderColor="coloredBorder"
+                borderColor="mainColor"
                 _hover={{ bg: 'transparentButtonHover' }}
                 transition="0.2s"
                 isExternal

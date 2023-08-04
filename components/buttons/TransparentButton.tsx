@@ -11,14 +11,14 @@ export const TransparentButton = ({ text, type }: ButtonProps) => {
       w="15rem"
       borderWidth="1px"
       borderStyle="solid"
-      borderColor="coloredBorder"
+      borderColor="mainColor"
       h="3.5rem"
       alignItems="center"
       borderRadius="5px"
       _hover={{ bg: 'transparentButtonHover' }}
       transition="0.2s"
       cursor="pointer"
-      color="coloredButton"
+      color="mainColor"
       _active={{ bg: 'transparentButtonActive' }}
       backdropFilter={colorMode === 'light' ? 'blur(24px)' : ''}
       type={type}

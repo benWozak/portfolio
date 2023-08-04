@@ -13,12 +13,12 @@ export const ThemeToggle = () => {
   return (
     <Flex
       onClick={toggleColorMode}
-      position="fixed"
+      // position="fixed"
       sx={{
         '& svg': {
           maxWidth: '22px',
-          fill: 'mainColorLight',
-          color: 'mainColorLight',
+          fill: 'mainColor',
+          color: 'mainColor',
         },
       }}
       h="3.2rem"
@@ -41,9 +41,9 @@ export const ThemeToggle = () => {
       borderStyle="solid"
       borderColor="grayBorder"
       cursor="pointer"
-      zIndex="99999"
-      right={{ base: '1.5rem', xl: '2rem' }}
-      bottom={{ base: '1.5rem', xl: '2rem' }}
+      // zIndex="99999"
+      // right={{ base: '1.5rem', xl: '2rem' }}
+      // bottom={{ base: '1.5rem', xl: '2rem' }}
       backdropFilter={colorMode === 'light' ? 'blur(24px)' : ''}
     >
       {colorMode === 'light'
