@@ -1,8 +1,9 @@
-import { Flex, Text } from '@chakra-ui/react'
+import { Flex, Text, Link } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
-// import { TransparentButton } from './buttons/TransparentButton'
+import { TransparentButton } from './buttons/TransparentButton'
 import { NavAnchor } from './NavAnchor'
+
 
 interface Props {
   content: any
@@ -79,8 +80,8 @@ export const Hero = (props: Props) => {
               </Text>
             </motion.div>
           </Flex>
-          {/* <Link
-            href='#projects'
+          <Link
+            // href='#projects'
             _hover={{ textDecoration: 'none' }}
             w='15rem'
             alignSelf={{ base: 'center', sm: 'unset' }}
@@ -90,11 +91,11 @@ export const Hero = (props: Props) => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <TransparentButton text='See my work' />
+              <TransparentButton text='Hire Me' />
             </motion.div>
-          </Link> */}
+          </Link>
         </Flex>
       </Flex>
     </Flex>
