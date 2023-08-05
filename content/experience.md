@@ -1,6 +1,6 @@
 ---
 entries:
-  - title: Front-End Software Engineer & Team Lead
+  - title: Team Lead | Front-End Software Engineer
     employer: chata.ai
     date: 09/2019 – present
     location: Calgary AB, Canada
