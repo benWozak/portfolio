@@ -3,7 +3,7 @@ import {
   Flex,
   Stack,
   Text,
-  Image,
+  // Image,
   Box,
   Link,
   Heading,
@@ -18,8 +18,8 @@ import {
   TypescriptIcon,
   MongoIcon,
   NodeIcon,
-  AndroidIcon,
-  AppleIcon,
+  // AndroidIcon,
+  // AppleIcon,
   CssIcon,
 } from 'assets/icons'
 
@@ -131,7 +131,7 @@ export const About = (props: Props) => {
               windowSize.width && windowSize.width < 1280 ? 'column' : 'row'
             }
           >
-            <Flex
+            {/* <Flex
               justify="center"
               alignItems="center"
               direction="column"
@@ -161,7 +161,7 @@ export const About = (props: Props) => {
                   alt="Ben Wozak"
                 />
               </Box>
-            </Flex>
+            </Flex> */}
             <Flex
               justify="flex-start"
               alignItems="flex-start"

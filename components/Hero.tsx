@@ -1,7 +1,7 @@
-import { Flex, Text, Link } from '@chakra-ui/react'
+import { Flex, Text, Link, Image, Box } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
-import { TransparentButton } from './buttons/TransparentButton'
+import { ActionButton } from './buttons/ActionButton'
 import { NavAnchor } from './NavAnchor'
 
 
@@ -24,11 +24,12 @@ export const Hero = (props: Props) => {
     >
       <NavAnchor id="home" />
       <Flex
-        w="90%"
+        w="95%"
         alignItems="center"
         justify="flex-start"
+        direction={{ base: 'column-reverse', md: 'row' }}
         pb={{ base: '5rem', xl: '2rem' }}
-        pl={{ base: '4%', md: '8%', lg: '11%', xl: '6vw', '2xl': '12vw' }}
+        pl={{ base: '2%', md: '2%', '2xl': '12vw' }}
       >
         <Flex direction="column" w="57rem" gap="1rem">
           <Flex>
@@ -40,26 +41,19 @@ export const Hero = (props: Props) => {
             >
               <Text
                 as="p"
-                variant="paragraphSecondary"
-                fontSize={{ base: '1rem', xl: '1.1rem' }}
-                lineHeight="36px"
+                variant="subTextColored"
+                fontSize={{ base: '1.2rem', xl: '1.4rem' }}
+                lineHeight="56px"
               >
                 {content.hero_prefix}
               </Text>
               <Text
                 as="h1"
-                variant="titleColored"
-                fontSize={{ base: '4rem', md: '4.5rem', xl: '4.8rem' }}
-                lineHeight="54px"
+                variant="titlePrimary"
+                fontSize={{ base: '5rem', md: '5.5rem', xl: '5.8rem' }}
+                lineHeight="84px"
               >
                 {content.hero_title}
-              </Text>
-              <Text
-                as="p"
-                variant="secondaryText"
-                fontSize={{ base: '2rem', md: '2.8rem', xl: '3.8rem' }}
-              >
-                {/* {content.hero_title_secondary} */}
               </Text>
             </motion.div>
           </Flex>
@@ -71,10 +65,10 @@ export const Hero = (props: Props) => {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <Text
-                variant="secondaryText"
+                variant="paragraphSecondary"
                 mb="2rem"
                 maxW="45rem"
-                fontSize={{ base: '1.1rem', xl: '1.6rem' }}
+                fontSize={{ base: '1.1rem', xl: '1.5rem' }}
               >
                 {content.hero_description}
               </Text>
@@ -93,9 +87,39 @@ export const Hero = (props: Props) => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <TransparentButton text='Hire Me' />
+              <ActionButton text='View Resume' />
             </motion.div>
           </Link>
+        </Flex>
+        <Flex 
+          direction="column" 
+          // w="57rem" 
+          w={{
+            sm: '18rem',
+            md: '14rem',
+            lg: '57rem',
+          }}
+          h={{ sm: '5rem', md: '5rem', lg: '44rem' }} 
+          gap="1rem" 
+          overflowX='hidden'
+          
+        >
+          <Box 
+            background="mainColor"
+            borderRadius="50% 25% 10% 0"
+            // _before={{ content: '"___"', display: 'inline-block', mr: '5px' }}
+            // _after={{ content: '"___"', display: 'inline-block', ml: '50px' }}
+            overflow='hidden'
+          >
+            <Image 
+              mt="4rem"
+              boxSize='40rem'
+              objectFit='contain'
+              src='/img/heroImage.png' 
+              alt="Ben Wozak"
+            />
+          </Box>
+          
         </Flex>
       </Flex>
     </Flex>

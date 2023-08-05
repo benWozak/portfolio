@@ -22,7 +22,7 @@ export const SectionTitle = ({ title }: SectionTitleProps) => {
         direction="row"
         pl={{ base: '0%', xl: '7%', '2xl': '12%', '3xl': '13%' }}
       >
-        <Flex w={{ base: '2rem', md: '3rem' }} h="1px" bg="mainColor" />
+        <Flex w={{ base: '2rem', md: '3rem' }} h="1px" bg="accentColor" />
         <Heading
           as="h2"
           fontSize={{

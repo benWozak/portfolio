@@ -195,13 +195,13 @@ export const ProjectItem = ({
               <Link
                 w={{ base: '11rem', '2xl': '49%' }}
                 h="3rem"
-                bg="transparentButton"
+                bg="ActionButton"
                 href={codeLink ? codeLink : previewLink}
                 borderRadius="5px"
                 borderWidth="1px"
                 borderStyle="solid"
                 borderColor="mainColor"
-                _hover={{ bg: 'transparentButtonHover' }}
+                _hover={{ bg: 'ActionButtonHover' }}
                 transition="0.2s"
                 isExternal
                 backdropFilter={colorMode === 'light' ? 'blur(24px)' : ''}

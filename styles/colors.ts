@@ -3,41 +3,45 @@ export const colors = {
     default: '#00CC9C',
     _dark: '#4DD1CA', //#05a3c7
   },
+  accentColor: {
+    default: '#00CC9C',
+    _dark: '#E55F3B', //#05a3c7
+  },
   primaryBackround: {
     default: 'rgb(33, 36, 49)',
-    _dark: 'rgb(33, 36, 49)',
+    _dark: '#15353C',
   },
   secondaryBackround: {
     default: '#181B25',
-    _dark: '#181B25',
+    _dark: '#0B1B1E',
   },
   primaryText: {
     default: '#8892b0',
-    _dark: '#8892b0',
+    _dark: '#F0F8FA',
   },
   secondaryText: {
-    default: '#ccd6f6',
-    _dark: '#ccd6f6',
+    default: '#B6D3E2',
+    _dark: '#B6D3E2',
   },
   coloredButtonHover: {
     default: '#4DD1CA', // TODO refactor
     _dark: '#4DD1CA', // TODO refactor
   },
-  transparentButton: {
+  ActionButton: {
     default: 'rgba(45, 53, 80, 0)',
     _dark: 'rgba(45, 53, 80, 0)',
   },
-  transparentButtonHover: {
-    default: 'rgb(255,255,255,0.05)',
-    _dark: 'rgb(12, 9, 11 0.7)',
+  ActionButtonHover: {
+    default: 'rgb(299, 95, 59 0.7)',
+    _dark: 'rgb(299, 95, 59 0.7)',
   },
   hamburgerBg: {
     default: 'rgb(12, 9, 11 0.5)',
     _dark: '#2c2f35',
   },
-  transparentButtonActive: {
+  ActionButtonActive: {
     default: 'rgb(255,255,255,0.10)',
-    _dark: '#3c4047',
+    _dark: '#rgb(299, 95, 59 0.7)',
   },
   grayBorder: {
     default: 'rgb(255,255,255,0.10)',

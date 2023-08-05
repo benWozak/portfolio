@@ -16,7 +16,7 @@ import {
 import emailjs from 'emailjs-com'
 import { GithubIcon } from 'assets/icons/github'
 import { LinkedInIcon } from 'assets/icons/linkedIn'
-import { TransparentButton } from './buttons/TransparentButton'
+import { ActionButton } from './buttons/ActionButton'
 import { NavAnchor } from './NavAnchor'
 
 const NEXT_SERVICE_ID = process.env.NEXT_SERVICE_ID
@@ -197,7 +197,7 @@ export const Contact = () => {
             />
           </FormControl>
           <Flex w="100%" justify="center" mt="3rem">
-            <TransparentButton text="Get in touch" type="submit" />
+            <ActionButton text="Get in touch" type="submit" />
           </Flex>
         </motion.div>
       </form>

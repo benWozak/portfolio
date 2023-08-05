@@ -40,8 +40,9 @@ const theme = extendTheme({
     Tabs,
   },
   fonts: {
-    heading: `"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;`,
-    body: `"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif`,
+    heading: `'Montserrat', sans-serif`,
+    // body: `"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif`,
+    body: `'Montserrat', sans-serif`
   },
 })
 

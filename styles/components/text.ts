@@ -4,6 +4,12 @@ export const Text = {
       fontWeight: 500,
       letterSpacing: '1px',
     },
+    subTextColored: {
+      fontSize: '1.2rem',
+      fontWeight: 400,
+      color: 'mainColor',
+      letterSpacing: '0.5px',
+    },
     paragraph: {
       fontSize: '1.1rem',
       fontWeight: 400,
@@ -17,7 +23,7 @@ export const Text = {
       letterSpacing: '0.1px',
     },
     paragraphSecondary: {
-      fontSize: '1.1rem',
+      fontSize: '1.2rem',
       fontWeight: 400,
       color: 'secondaryText',
       letterSpacing: '0.5px',
@@ -29,8 +35,14 @@ export const Text = {
     },
     titleColored: {
       fontWeight: 700,
-      fontSize: '3.8rem',
+      fontSize: '4rem',
       color: 'mainColor',
+      letterSpacing: '1px',
+    },
+    titlePrimary: {
+      fontWeight: 700,
+      fontSize: '4rem',
+      color: 'primaryText',
       letterSpacing: '1px',
     },
   },
