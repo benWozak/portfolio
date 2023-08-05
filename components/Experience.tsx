@@ -9,11 +9,13 @@ import {
   Tab,
   TabPanel,
   Link,
+  Icon,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { NavAnchor } from './NavAnchor'
 import { SectionTitle } from './SectionTitle'
 import { useWindowSize } from 'utils/hooks'
+import { FaAngleDoubleRight } from 'react-icons/fa'
 
 interface Props {
   content: any
@@ -97,7 +99,7 @@ export const Experience = (props: Props) => {
                           {entry.description.map((item: any, index: number) => (
                             <ListItem key={index}>
                               <Text variant="paragraph" mb="0.2rem">
-                                {`- ${item}`}
+                              <Icon as={FaAngleDoubleRight} color="mainColor" />{` ${item}`}
                               </Text>
                             </ListItem>
                           ))}
