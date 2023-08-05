@@ -10,6 +10,9 @@ import {
   TabPanel,
   Link,
   Icon,
+  HStack,
+  Tag,
+  TagLabel,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { NavAnchor } from './NavAnchor'
@@ -70,11 +73,10 @@ export const Experience = (props: Props) => {
                 <TabPanels>
                   {content.entries.map((entry: any, index: number) => {
                     return (
-                      <TabPanel key={index}>
+                      <TabPanel key={index} ml={{ base: 0, md: '2rem' }}>
                         <Text
                           variant="experienceSubTitle"
                           as="p"
-                          ml={{ base: 0, md: '1rem' }}
                         >
                           {entry.title}{' '}
                           <Link
@@ -87,14 +89,19 @@ export const Experience = (props: Props) => {
                           fontSize="sm"
                           as="b"
                           mb="2rem"
-                          ml={{ base: 0, md: '1rem' }}
                         >
                           {entry.date}
                         </Text>
+                        <Text 
+                          mt={'1rem'}
+                          
+                          variant="paragraphSecondary"
+                        >
+                          {entry.summary}
+                        </Text>
                         <UnorderedList
                           listStyleType="none"
-                          mt={'1rem'}
-                          ml={{ base: 0, md: '2rem' }}
+                          mt={'1rem'} 
                         >
                           {entry.description.map((item: any, index: number) => (
                             <ListItem key={index}>
@@ -104,6 +111,16 @@ export const Experience = (props: Props) => {
                             </ListItem>
                           ))}
                         </UnorderedList>
+                        <HStack 
+                          spacing={4}
+                          mt={'1rem'}
+                        >
+                          {entry.technologies.map((item: string, index: number) => (
+                            <Tag key={index} variant='outline' color='mainColor' borderColor="mainColor">
+                              <TagLabel>{` ${item} `}</TagLabel>
+                            </Tag>
+                          ))}
+                      </HStack>
                       </TabPanel>
                     )
                   })}

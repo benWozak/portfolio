@@ -11,6 +11,7 @@ const baseStyle = definePartsStyle({
       borderColor: 'inherit',
       mb: '-2px',
     },
+    colorScheme: 'mainColor',
   },
 })
 
