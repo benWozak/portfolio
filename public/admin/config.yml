@@ -44,6 +44,12 @@ collections:
                   widget: 'list',
                   field: { label: Item, name: item, widget: text },
                 }
+              - {
+                  label: 'Technologies',
+                  name: 'technologies',
+                  widget: 'list',
+                  field: { label: Item, name: item, widget: string },
+                }
       - label: 'About'
         name: 'about'
         file: 'content/about.md'
