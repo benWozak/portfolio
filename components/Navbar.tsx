@@ -118,60 +118,72 @@ export const Navbar = () => {
         <nav>
           <Flex gap="1.5rem" direction="column" alignItems="flex-start">
             {navItems.map((navItem, index) => (
-              <NavbarItem
-                key={index}
-                text={navItem.text}
-                path={navItem.path}
-                isActive={navItem.isActive}
-              />
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.3 }}
+              >
+                <NavbarItem
+                  key={index}
+                  text={navItem.text}
+                  path={navItem.path}
+                  isActive={navItem.isActive}
+                />
+              </motion.div>
             ))}
           </Flex>
         </nav>
       </motion.div>
-      <Flex justify="center" alignItems="center" gap="0rem" mt="16rem" ml="1rem">
-        <Link
-          href="https://github.com/benWozak"
-          isExternal
-          width="3rem"
-          fill="githubIcon"
-          _hover={{
-            '& *': {
-              fill: 'rgb(255,255,255,0.9)',
-            },
-          }}
-          transition="0.3s"
-          sx={{
-            '& *': {
-              fill: 'rgb(255,255,255,0.6)',
-            },
-          }}
-        >
-          <Flex width="1.6rem">
-            <Icon as={GithubIcon} />
-          </Flex>
-        </Link>
-        <Link
-          href="https://ca.linkedin.com/in/ben-wozak"
-          isExternal
-          width="3rem"
-          fill="LinkedInIcon"
-          _hover={{
-            '& *': {
-              fill: 'rgb(255,255,255,0.9)',
-            },
-          }}
-          transition="0.3s"
-          sx={{
-            '& *': {
-              fill: 'rgb(255,255,255,0.6)',
-            },
-          }}
-        >
-          <Flex width="1.6rem">
-            <Icon as={LinkedInIcon} />
-          </Flex>
-        </Link>
-      </Flex>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
+       <Flex justify="center" alignItems="center" gap="0rem" mt="16rem" ml="1rem">
+          <Link
+            href="https://github.com/benWozak"
+            isExternal
+            width="3rem"
+            fill="githubIcon"
+            _hover={{
+              '& *': {
+                fill: 'rgb(255,255,255,0.9)',
+              },
+            }}
+            transition="0.3s"
+            sx={{
+              '& *': {
+                fill: 'rgb(255,255,255,0.6)',
+              },
+            }}
+          >
+            <Flex width="1.6rem">
+              <Icon as={GithubIcon} />
+            </Flex>
+          </Link>
+          <Link
+            href="https://ca.linkedin.com/in/ben-wozak"
+            isExternal
+            width="3rem"
+            fill="LinkedInIcon"
+            _hover={{
+              '& *': {
+                fill: 'rgb(255,255,255,0.9)',
+              },
+            }}
+            transition="0.3s"
+            sx={{
+              '& *': {
+                fill: 'rgb(255,255,255,0.6)',
+              },
+            }}
+          >
+            <Flex width="1.6rem">
+              <Icon as={LinkedInIcon} />
+            </Flex>
+          </Link>
+        </Flex> 
+      </motion.div>
     </Flex>
   )
 }

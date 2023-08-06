@@ -58,8 +58,8 @@ export const Hero = (props: Props) => {
               <Text
                 as="h1"
                 variant="titlePrimary"
-                fontSize={{ base: '5rem',sm: '3.5rem', md: '5.5rem', xl: '5.8rem' }}
-                lineHeight="84px"
+                fontSize={{ base: '5rem', sm: '4rem', md: '5.5rem', xl: '5.8rem' }}
+                lineHeight={{ base: "84px", sm: '60px', md: '84px'}}
               >
                 {content.hero_title}
               </Text>
@@ -106,9 +106,9 @@ export const Hero = (props: Props) => {
             md: '24rem',
             lg: '57rem',
           }}
-          h={{ sm: '5rem', md: '25rem', lg: '44rem' }}
+          h={{ sm: '5rem', md: '44rem', lg: '44rem' }}
           gap="1rem" 
-          overflowX='hidden'
+          overflow='hidden'
           
         >
           <motion.div
@@ -118,6 +118,7 @@ export const Hero = (props: Props) => {
             transition={{ duration: 0.8 }}
           >
               <Box 
+                pt="2rem"
                 background={{ base: "primaryBackround", sm: "primaryBackround", md: 'mainColor'}}
                 borderRadius="50% 25% 10% 0"
                 overflow='hidden'
@@ -130,7 +131,6 @@ export const Hero = (props: Props) => {
                 >
                   <Image 
                       boxSize='40rem'
-                      h={{ base: '35rem', sm: '35rem'}}
                       objectFit='contain'
                       src='/img/heroImage.png' 
                       alt="Ben Wozak"
