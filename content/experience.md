@@ -28,7 +28,7 @@ entries:
       - Postgres
       - Jira/Confluence
       - Git
-  - title: Front-end Developer
+  - title: Web Developer
     employer: KRD Consulting
     date: 04/2019 – 12/2019
     location: Calgary AB, Canada
