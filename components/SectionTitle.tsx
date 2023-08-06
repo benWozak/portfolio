@@ -41,7 +41,7 @@ export const SectionTitle = ({ title }: SectionTitleProps) => {
         <Flex
           w={{ base: '2rem', md: '3rem' }}
           h="1px"
-          bg="mainColor"
+          bg="accentColor"
           display={{ base: 'flex', md: 'flex', xl: 'none' }}
         />
       </Flex>

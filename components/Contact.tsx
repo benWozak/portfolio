@@ -120,7 +120,7 @@ export const Contact = () => {
           <Flex
             w={{ base: '2rem', md: '3rem' }}
             h="1px"
-            bg="mainColor"
+            bg="accentColor"
             mb="1.5rem"
             mr={{ base: '1rem', md: '2rem' }}
           />
@@ -139,7 +139,7 @@ export const Contact = () => {
           <Flex
             w={{ base: '2rem', md: '3rem' }}
             h="1px"
-            bg="mainColor"
+            bg="accentColor"
             mb="1.5rem"
             ml={{ base: '1rem', md: '2rem' }}
           />

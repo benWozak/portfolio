@@ -15,7 +15,7 @@ export const Hero = (props: Props) => {
   return (
     <Flex
       w="100%"
-      h="100vh"
+      minHeight="100vh"
       alignItems="center"
       justify="center"
       id="home"
@@ -31,7 +31,15 @@ export const Hero = (props: Props) => {
         pb={{ base: '5rem', xl: '2rem' }}
         pl={{ base: '2%', md: '2%', '2xl': '12vw' }}
       >
-        <Flex direction="column" w="57rem" gap="1rem">
+        <Flex 
+          direction="column" 
+          w={{
+            sm: '18rem',
+            md: '14rem',
+            lg: '57rem',
+          }}
+          gap="1rem"
+        >
           <Flex>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -93,7 +101,6 @@ export const Hero = (props: Props) => {
         </Flex>
         <Flex 
           direction="column" 
-          // w="57rem" 
           w={{
             sm: '18rem',
             md: '14rem',

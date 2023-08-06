@@ -1,4 +1,4 @@
-import { Flex, Icon, Link, Text } from '@chakra-ui/react'
+import { Flex, Icon, Link, Text, Image } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 // import { MainLogo } from '@/assets/icons/logo'
@@ -85,7 +85,6 @@ export const Navbar = () => {
       left="0"
       top="0"
       direction="column"
-      justify="center"
       alignItems="flex-start"
       borderWidth="0 1px 0 0"
       borderStyle="solid"
@@ -97,17 +96,25 @@ export const Navbar = () => {
       display={{ base: 'none', lg: 'flex' }}
       backdropFilter={'blur(24px)'}
     >
+      <Flex direction="column" alignItems="flex-start" pb="10rem">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link href='#home'>
+            <Flex mb='2rem' ml='-1rem'>
+              <Image boxSize='10rem' src='/img/BW_logo_light.svg' />
+            </Flex>
+          </Link>
+        </motion.div>
+      </Flex>
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         <nav>
-          {/* <Link href='#home'>
-            <Flex mb='2rem' ml='-1rem'>
-              <Icon as={MainLogo} />
-            </Flex>
-          </Link> */}
           <Flex gap="1.5rem" direction="column" alignItems="flex-start">
             {navItems.map((navItem, index) => (
               <NavbarItem
@@ -199,9 +206,7 @@ export const MobileNavbar = () => {
         borderColor="mobileNavbarBorder"
         maxW="100vw"
       >
-        {/* <Link py='0.5rem' href='#home'>
-          <Icon as={MainLogo} />
-        </Link> */}
+        <Image boxSize='5rem' src='/img/BW_logo_light.svg' />
         <Flex
           w="2.7rem"
           h="3rem"

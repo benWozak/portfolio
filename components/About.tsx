@@ -3,8 +3,6 @@ import {
   Flex,
   Stack,
   Text,
-  // Image,
-  Box,
   Link,
   Heading,
   Icon,
@@ -51,7 +49,7 @@ export const About = (props: Props) => {
     },
     {
       title: 'Full Stack Development',
-      text: 'Object-Oriented PRograming using MERN or PERN stack: ReactJS, NodeJs, ExpressJS, MongoDB or Postrgres',
+      text: 'Object-Oriented Programing using MERN or PERN stack: ReactJS, NodeJs, ExpressJS, MongoDB or Postrgres',
       logoList: [ReactIcon, NodeIcon, MongoIcon],
       show: content.showFS,
     },
@@ -131,50 +129,24 @@ export const About = (props: Props) => {
               windowSize.width && windowSize.width < 1280 ? 'column' : 'row'
             }
           >
-            {/* <Flex
-              justify="center"
-              alignItems="center"
-              direction="column"
-              mb="4rem"
-              w={{
-                base: '90%',
-                sm: '70%',
-                md: '24rem',
-                xl: '21vw',
-                '2xl': '19.5rem',
-                '3xl': '20.5em',
-              }}
-            >
-              <Box
-                boxSize="sm"
-                height="250px"
-                display="flex"
-                alignItems="flex-start"
-                justifyContent="center"
-              >
-                <Image
-                  borderRadius="full"
-                  boxSize="250px"
-                  objectFit="contain"
-                  src={content.photo}
-                  fallbackSrc="https://via.placeholder.com/150"
-                  alt="Ben Wozak"
-                />
-              </Box>
-            </Flex> */}
             <Flex
               justify="flex-start"
-              alignItems="flex-start"
+              alignItems="center"
               direction="column"
               gap={{ base: '2rem', lg: '1.7rem', xl: '1.4rem', '2xl': '2rem' }}
-              px={{ base: '1rem', md: '15%', lg: '20%', xl: '0rem' }}
+              px={{ base: '1rem', md: '5%', lg: '10%', xl: '0rem' }}
               wrap={{ base: 'wrap', md: 'wrap', xl: 'wrap', '2xl': 'nowrap' }}
-              maxWidth={{ base: '40rem', md: '40rem', xl: '40rem' }}
+              maxWidth={{ base: '40rem', md: '40rem', xl: '60rem' }}
               mb="4rem"
             >
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
+                  p: (props: any) => {
+                    return (
+                      <Text variant="paragraphSecondary">{props.children}</Text>
+                    )
+                  },
                   a: (props: any) => {
                     return (
                       <Link

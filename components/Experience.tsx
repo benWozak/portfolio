@@ -54,7 +54,7 @@ export const Experience = (props: Props) => {
               direction="column"
               pr="2rem"
               gap="1rem"
-              w={{ base: '100%', lg: '95%', xl: '85%' }}
+              w={{ base: '100%', lg: '100%' }}
             >
               <Tabs
                 orientation={
@@ -65,7 +65,9 @@ export const Experience = (props: Props) => {
                 defaultIndex={0}
                 isLazy
               >
-                <TabList>
+                <TabList align={windowSize.width && windowSize.width < 1000
+                    ? 'center'
+                    : 'start'}>
                   {content.entries.map((entry: any, index: number) => {
                     return <Tab key={index}>{entry.employer}</Tab>
                   })}
@@ -114,6 +116,7 @@ export const Experience = (props: Props) => {
                         <HStack 
                           spacing={4}
                           mt={'1rem'}
+                          flexWrap='wrap'
                         >
                           {entry.technologies.map((item: string, index: number) => (
                             <Tag key={index} variant='outline' color='mainColor' borderColor="mainColor">

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Flex, useColorMode } from '@chakra-ui/react'
+import { Flex, useColorMode, Divider } from '@chakra-ui/react'
 
 import { NextPage, GetStaticProps } from 'next'
 
