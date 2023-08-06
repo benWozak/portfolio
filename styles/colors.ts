@@ -4,7 +4,7 @@ export const colors = {
     _dark: '#4DD1CA', //#05a3c7
   },
   accentColor: {
-    default: '#00CC9C',
+    default: '#E55F3B',
     _dark: '#E55F3B', //#05a3c7
   },
   primaryBackround: {
@@ -16,7 +16,7 @@ export const colors = {
     _dark: '#0B1B1E',
   },
   primaryText: {
-    default: '#8892b0',
+    default: '#F0F8FA',
     _dark: '#F0F8FA',
   },
   secondaryText: {

@@ -119,12 +119,12 @@ export const Navbar = () => {
           <Flex gap="1.5rem" direction="column" alignItems="flex-start">
             {navItems.map((navItem, index) => (
               <motion.div
+                key={index}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.3 }}
               >
                 <NavbarItem
-                  key={index}
                   text={navItem.text}
                   path={navItem.path}
                   isActive={navItem.isActive}
