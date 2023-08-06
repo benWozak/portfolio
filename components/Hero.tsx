@@ -19,7 +19,7 @@ export const Hero = (props: Props) => {
       alignItems="center"
       justify="center"
       id="home"
-      pt={{ base: '10rem', md: '0' }}
+      pt={{ base: '6rem', sm: '0' }}
       mb={{ base: '5rem', md: '0' }}
     >
       <NavAnchor id="home" />
@@ -27,7 +27,7 @@ export const Hero = (props: Props) => {
         w="95%"
         alignItems="center"
         justify="flex-start"
-        direction={{ base: 'column-reverse', md: 'row' }}
+        // direction={{ base: 'column-reverse', md: 'row' }}
         pb={{ base: '5rem', xl: '2rem' }}
         pl={{ base: '2%', md: '2%', '2xl': '12vw' }}
       >
@@ -58,7 +58,7 @@ export const Hero = (props: Props) => {
               <Text
                 as="h1"
                 variant="titlePrimary"
-                fontSize={{ base: '5rem', md: '5.5rem', xl: '5.8rem' }}
+                fontSize={{ base: '5rem',sm: '3.5rem', md: '5.5rem', xl: '5.8rem' }}
                 lineHeight="84px"
               >
                 {content.hero_title}
@@ -103,30 +103,41 @@ export const Hero = (props: Props) => {
           direction="column" 
           w={{
             sm: '18rem',
-            md: '14rem',
+            md: '24rem',
             lg: '57rem',
           }}
-          h={{ sm: '5rem', md: '5rem', lg: '44rem' }} 
+          h={{ sm: '5rem', md: '25rem', lg: '44rem' }}
           gap="1rem" 
           overflowX='hidden'
           
         >
-          <Box 
-            background="mainColor"
-            borderRadius="50% 25% 10% 0"
-            // _before={{ content: '"___"', display: 'inline-block', mr: '5px' }}
-            // _after={{ content: '"___"', display: 'inline-block', ml: '50px' }}
-            overflow='hidden'
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            <Image 
-              mt="4rem"
-              boxSize='40rem'
-              objectFit='contain'
-              src='/img/heroImage.png' 
-              alt="Ben Wozak"
-            />
-          </Box>
-          
+              <Box 
+                background={{ base: "primaryBackround", sm: "primaryBackround", md: 'mainColor'}}
+                borderRadius="50% 25% 10% 0"
+                overflow='hidden'
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3}}
+                >
+                  <Image 
+                      boxSize='40rem'
+                      h={{ base: '35rem', sm: '35rem'}}
+                      objectFit='contain'
+                      src='/img/heroImage.png' 
+                      alt="Ben Wozak"
+                    />
+                </motion.div>
+              </Box>
+            </motion.div>
         </Flex>
       </Flex>
     </Flex>

@@ -14,8 +14,6 @@ import {
   AlertIcon,
 } from '@chakra-ui/react'
 import emailjs from 'emailjs-com'
-import { GithubIcon } from 'assets/icons/github'
-import { LinkedInIcon } from 'assets/icons/linkedIn'
 import { ActionButton } from './buttons/ActionButton'
 import { NavAnchor } from './NavAnchor'
 
@@ -58,7 +56,7 @@ export const Contact = () => {
         status: undefined,
         message: '',
       })
-    }, 3000)
+    }, 5000)
   }
 
   const handleForm = (e: any) => {
@@ -215,51 +213,6 @@ export const Contact = () => {
           </Alert>
         </motion.div>
       )}
-
-      <Flex justify="center" alignItems="center" gap="0.4rem" mt="1.5rem">
-        <Link
-          href="https://github.com/benWozak"
-          isExternal
-          width="3rem"
-          fill="githubIcon"
-          _hover={{
-            '& *': {
-              fill: 'rgb(255,255,255,0.9)',
-            },
-          }}
-          transition="0.3s"
-          sx={{
-            '& *': {
-              fill: 'rgb(255,255,255,0.6)',
-            },
-          }}
-        >
-          <Flex width="2.6rem">
-            <Icon as={GithubIcon} />
-          </Flex>
-        </Link>
-        <Link
-          href="https://ca.linkedin.com/in/ben-wozak"
-          isExternal
-          width="3rem"
-          fill="LinkedInIcon"
-          _hover={{
-            '& *': {
-              fill: 'rgb(255,255,255,0.9)',
-            },
-          }}
-          transition="0.3s"
-          sx={{
-            '& *': {
-              fill: 'rgb(255,255,255,0.6)',
-            },
-          }}
-        >
-          <Flex width="2.6rem">
-            <Icon as={LinkedInIcon} />
-          </Flex>
-        </Link>
-      </Flex>
     </Flex>
   )
 }

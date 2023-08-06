@@ -1,7 +1,8 @@
 import { Flex, Icon, Link, Text, Image } from '@chakra-ui/react'
+import { GithubIcon } from 'assets/icons/github'
+import { LinkedInIcon } from 'assets/icons/linkedIn'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-// import { MainLogo } from '@/assets/icons/logo'
 
 interface NavbarItemProps {
   text: string
@@ -91,7 +92,7 @@ export const Navbar = () => {
       borderColor="grayBorder"
       h="100%"
       pb="6rem"
-      pl="3.5rem"
+      pl="3rem"
       bg="secondaryBackround"
       display={{ base: 'none', lg: 'flex' }}
       backdropFilter={'blur(24px)'}
@@ -127,6 +128,50 @@ export const Navbar = () => {
           </Flex>
         </nav>
       </motion.div>
+      <Flex justify="center" alignItems="center" gap="0rem" mt="16rem" ml="1rem">
+        <Link
+          href="https://github.com/benWozak"
+          isExternal
+          width="3rem"
+          fill="githubIcon"
+          _hover={{
+            '& *': {
+              fill: 'rgb(255,255,255,0.9)',
+            },
+          }}
+          transition="0.3s"
+          sx={{
+            '& *': {
+              fill: 'rgb(255,255,255,0.6)',
+            },
+          }}
+        >
+          <Flex width="1.6rem">
+            <Icon as={GithubIcon} />
+          </Flex>
+        </Link>
+        <Link
+          href="https://ca.linkedin.com/in/ben-wozak"
+          isExternal
+          width="3rem"
+          fill="LinkedInIcon"
+          _hover={{
+            '& *': {
+              fill: 'rgb(255,255,255,0.9)',
+            },
+          }}
+          transition="0.3s"
+          sx={{
+            '& *': {
+              fill: 'rgb(255,255,255,0.6)',
+            },
+          }}
+        >
+          <Flex width="1.6rem">
+            <Icon as={LinkedInIcon} />
+          </Flex>
+        </Link>
+      </Flex>
     </Flex>
   )
 }
@@ -265,6 +310,50 @@ export const MobileNavbar = () => {
                 onClick={mobileNavItem.onClick}
               />
             ))}
+            <Flex justify="center" alignItems="center" gap="0rem" ml="10rem">
+              <Link
+                href="https://github.com/benWozak"
+                isExternal
+                width="3rem"
+                fill="githubIcon"
+                _hover={{
+                  '& *': {
+                    fill: 'rgb(255,255,255,0.9)',
+                  },
+                }}
+                transition="0.3s"
+                sx={{
+                  '& *': {
+                    fill: 'rgb(255,255,255,0.6)',
+                  },
+                }}
+              >
+                <Flex width="1.6rem">
+                  <Icon as={GithubIcon} />
+                </Flex>
+              </Link>
+              <Link
+                href="https://ca.linkedin.com/in/ben-wozak"
+                isExternal
+                width="3rem"
+                fill="LinkedInIcon"
+                _hover={{
+                  '& *': {
+                    fill: 'rgb(255,255,255,0.9)',
+                  },
+                }}
+                transition="0.3s"
+                sx={{
+                  '& *': {
+                    fill: 'rgb(255,255,255,0.6)',
+                  },
+                }}
+              >
+                <Flex width="1.6rem">
+                  <Icon as={LinkedInIcon} />
+                </Flex>
+              </Link>
+            </Flex>
           </Flex>
         </motion.div>
       )}
