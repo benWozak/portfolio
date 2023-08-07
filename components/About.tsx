@@ -114,7 +114,6 @@ export const About = (props: Props) => {
         justify="center"
         alignItems="flex-start"
         direction={{base: "row", sm: "column", md: 'row'}}
-        // direction="column"
         gap="2"
         mt="1rem"
       >

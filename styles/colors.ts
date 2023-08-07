@@ -16,7 +16,7 @@ export const colors = {
     _dark: '#0B1B1E',
   },
   primaryText: {
-    default: 'F0F8FA',
+    default: '#F0F8FA',
     _dark: '#F0F8FA',
   },
   secondaryText: {
