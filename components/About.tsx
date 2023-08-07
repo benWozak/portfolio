@@ -43,13 +43,13 @@ export const About = (props: Props) => {
   const skillsList = [
     {
       title: 'Front-end Focus',
-      text: 'Specializing in ReactJS, Typescript and NextJS, I build high-quality web applications that are tailored to your needs.',
+      text: 'Specializing in React, Typescript and NextJS, I build high-quality web applications that are optimized and elegantly designed.',
       logoList: [ReactIcon, TypescriptIcon, CssIcon],
       show: content.showFE,
     },
     {
       title: 'Full Stack Development',
-      text: 'Object-Oriented Programing using MERN or PERN stack: ReactJS, NodeJs, ExpressJS, MongoDB or Postrgres',
+      text: 'Object-Oriented Programing using MERN or PERN stack: React, NodeJS, ExpressJS, MongoDB or Postrgres.',
       logoList: [ReactIcon, NodeIcon, MongoIcon],
       show: content.showFS,
     },
@@ -122,10 +122,10 @@ export const About = (props: Props) => {
         <Flex 
           w={{
             sm: '100%',
-            md: '24rem',
+            md: '14rem',
             lg: '57rem',
           }}
-          h={{ sm: '34rem', md: '44rem', lg: '44rem' }}
+          h={{ sm: '24rem', md: '44rem', lg: '44rem' }}
           gap="1rem" 
           overflow='hidden'
           display={{base: 'block', xs:'block', sm: 'block', md: 'none'}}
@@ -139,7 +139,9 @@ export const About = (props: Props) => {
               <Box 
                 pt="2rem"
                 background="mainColor"
-                borderRadius={{base: "50% 25% 10% 0", sm: '40% 40% 20% 20%'}}
+                borderRadius={ //Chakra UI breakpoints don't work with this property
+                  windowSize.width && windowSize.width < 1280 ? '40% 40% 10% 10%' : "50% 25% 10% 0"
+                }
                 overflow='hidden'
                 w={{ base: '100%' }}
               >
@@ -150,7 +152,9 @@ export const About = (props: Props) => {
                   transition={{ duration: 0.8, delay: 0.3}}
                 >
                   <Image 
-                      boxSize='40rem'
+                      boxSize={ //Chakra UI breakpoints don't work with this property
+                        windowSize.width && windowSize.width < 1280 ? '30rem' : '40rem'
+                      }
                       objectFit='contain'
                       src='/img/heroImage.png' 
                       alt="Ben Wozak"
@@ -195,7 +199,7 @@ export const About = (props: Props) => {
                         href={props.href}
                         isExternal
                         color="mainColor"
-                      >{`@${props.children}`}</Link>
+                      >{`${props.children}`}</Link>
                     )
                   },
                 }}
