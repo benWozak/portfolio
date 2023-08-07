@@ -117,7 +117,6 @@ export const About = (props: Props) => {
           windowSize.width && windowSize.width < 1280 ? 'column' : 'row'
         }
         gap="2"
-        mt="1rem"
       >
         <Flex 
           w={{
@@ -129,6 +128,7 @@ export const About = (props: Props) => {
           gap="1rem" 
           overflow='hidden'
           display={{base: 'block', xs:'block', sm: 'block', md: 'none'}}
+          mb='4rem'
         >
           <motion.div
             initial={{ opacity: 0, y: 50 }}

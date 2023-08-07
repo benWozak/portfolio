@@ -73,7 +73,14 @@ const Home: NextPage<Props> = (props: Props) => {
         <title>Ben Wozak Portfolio</title>
         <meta name="description" content="Web development portfolio" />
         <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/img/favicon.ico" />
+        {/* <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> */}
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#0b1b1e" />
+
+
         <script
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
           async
