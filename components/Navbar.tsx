@@ -37,7 +37,7 @@ export const Navbar = () => {
   const [activeItem, setActiveItem] = useState<string>('home')
   useEffect(() => {
     const handleScroll = () => {
-      const sectionIds = ['home', 'about', 'projects', 'experience', 'contact']
+      const sectionIds = ['home', 'about', 'experience','projects', 'contact']
       const scrollPosition = window.scrollY
       for (let i = sectionIds.length - 1; i >= 0; i--) {
         const section = document.getElementById(sectionIds[i])
@@ -63,14 +63,14 @@ export const Navbar = () => {
       isActive: activeItem === 'about',
     },
     {
-      text: 'Projects',
-      path: '#projects',
-      isActive: activeItem === 'projects',
-    },
-    {
       text: 'Experience',
       path: '#experience',
       isActive: activeItem === 'experience',
+    },
+    {
+      text: 'Projects',
+      path: '#projects',
+      isActive: activeItem === 'projects',
     },
     {
       text: 'Contact',
@@ -226,13 +226,13 @@ export const MobileNavbar = () => {
       onClick: () => setIsOpen(false),
     },
     {
-      text: 'Projects',
-      path: '#projects',
+      text: 'Experience',
+      path: '#experience',
       onClick: () => setIsOpen(false),
     },
     {
-      text: 'Experience',
-      path: '#experience',
+      text: 'Projects',
+      path: '#projects',
       onClick: () => setIsOpen(false),
     },
     {

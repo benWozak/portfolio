@@ -1,28 +1,25 @@
-import { Flex, HStack, Tag, TagLabel, Heading, Link, Text, useColorMode } from '@chakra-ui/react'
-import Image, { StaticImageData } from 'next/image'
+import { Flex, HStack, Tag, TagLabel, Heading, Link, Text, useColorMode, Image } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 interface ProjectItemProps {
   title: string
-  desc: string
+  description: string
   techStack: string[]
   liveLink: string
   codeLink?: string
-  image: StaticImageData
+  image: string
   previewLink?: string
-  isLight?: boolean
   index: number
 }
 
 export const ProjectItem = ({
   title,
-  desc,
+  description,
   techStack,
   liveLink,
   codeLink,
   image,
   previewLink,
-  isLight,
   index,
 }: ProjectItemProps) => {
   const { colorMode } = useColorMode()
@@ -90,9 +87,7 @@ export const ProjectItem = ({
             left="0"
             w="100%"
             h="100%"
-            backgroundColor={
-              isLight ? 'rgb(49, 151, 149, 0.1)' : 'rgb(255,255,255,0.05)'
-            }
+            backgroundColor='rgb(255,255,255,0.05)'
             opacity="0"
             transition="0.2s"
             href={liveLink}
@@ -138,7 +133,7 @@ export const ProjectItem = ({
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Text variant="paragraphLarge">{desc}</Text>{' '}
+              <Text variant="paragraphLarge">{description}</Text>{' '}
             </motion.div>
           </Flex>
           <Flex

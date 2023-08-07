@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Flex, useColorMode, Divider } from '@chakra-ui/react'
+import { Flex, useColorMode } from '@chakra-ui/react'
 
 import { NextPage, GetStaticProps } from 'next'
 
@@ -15,6 +15,7 @@ interface Props {
   hero: HeroAttributes
   experience: ExperienceAttributes
   about: AboutAttributes
+  projects: ProjectAttributes
 }
 type HeroAttributes = {
   attributes: {
@@ -47,9 +48,24 @@ type AboutAttributes = {
   }
 }
 
+type Project = {
+  title: string
+  desc: string
+  techStack: string[],
+  liveLink: string,
+  codeLink: string,
+  image: string,
+}
+
+type ProjectAttributes = {
+  attributes: {
+    projects: Project[]
+  }
+}
+
 const Home: NextPage<Props> = (props: Props) => {
   const { colorMode } = useColorMode()
-  const { hero, experience, about } = props
+  const { hero, experience, about, projects } = props
 
   return (
     <>
@@ -76,8 +92,8 @@ const Home: NextPage<Props> = (props: Props) => {
         <MobileNavbar />
         <Hero content={hero.attributes} />
         <About content={about.attributes} />
-        <Projects />
         <Experience content={experience.attributes} />
+        <Projects content={projects.attributes} />
         <Contact />
       </Flex>
     </>
@@ -88,11 +104,13 @@ export const getStaticProps: GetStaticProps = async () => {
   const hero = await import(`../content/${'hero'}.md`)
   const experince = await import(`../content/${'experience'}.md`)
   const about = await import(`../content/${'about.md'}`)
+  const projects = await import(`../content/${'projects.md'}`)
   return {
     props: {
       hero: hero.default,
       experience: experince.default,
       about: about.default,
+      projects: projects.default
     },
   }
 }

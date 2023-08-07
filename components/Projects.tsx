@@ -1,22 +1,23 @@
 import { Flex, Heading } from '@chakra-ui/react'
-
-import PortfolioImage from '../assets/images/portfolio_pre.png'
 import { ProjectItem } from './ProjectItem'
 import { SectionTitle } from './SectionTitle'
 import { NavAnchor } from './NavAnchor'
 
-const projectsData = [
-  {
-    title: 'Portfolio',
-    desc: 'My developer portfolio.',
-    techStack: ['NextJS', 'Typescript', 'Chakra-UI', 'DecapCMS'],
-    liveLink: 'https://benwozak.netlify.app/',
-    codeLink: 'https://github.com/benWozak/portfolio',
-    image: PortfolioImage,
-  },
-]
+type Project = {
+  title: string
+  description: string
+  techStack: string[],
+  liveLink: string,
+  codeLink: string,
+  image: string,
+}
 
-export const Projects = () => {
+interface Props {
+  content: any
+}
+
+export const Projects = ({ content }: Props) => {
+  console.log(content.projects)
   return (
     <>
       <NavAnchor id="projects" />
@@ -31,7 +32,7 @@ export const Projects = () => {
           gap={{ base: '0rem', md: '3rem' }}
           px={{ sm: '1rem', '2xl': '5rem' }}
         >
-          {projectsData.map((project, index) => (
+          {content.projects.map((project: Project, index: number) => (
             <ProjectItem {...project} key={project.title} index={index} />
           ))}
         </Flex>
