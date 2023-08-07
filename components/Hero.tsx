@@ -34,8 +34,8 @@ export const Hero = (props: Props) => {
         <Flex 
           direction="column" 
           w={{
-            sm: '18rem',
-            md: '14rem',
+            sm: '44rem',
+            md: '44rem',
             lg: '57rem',
           }}
           gap="1rem"
@@ -103,14 +103,14 @@ export const Hero = (props: Props) => {
         <Flex 
           direction="column" 
           w={{
-            sm: '18rem',
+            sm: '28rem',
             md: '24rem',
             lg: '57rem',
           }}
-          h={{ sm: '5rem', md: '44rem', lg: '44rem' }}
+          h={{ sm: '34rem', md: '44rem', lg: '44rem' }}
           gap="1rem" 
           overflow='hidden'
-          
+          display={{base: 'block', xs:'none', sm: 'none', md: 'block'}}
         >
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -120,7 +120,7 @@ export const Hero = (props: Props) => {
           >
               <Box 
                 pt="2rem"
-                background={{ base: "primaryBackround", sm: "primaryBackround", md: 'mainColor'}}
+                background="mainColor"
                 borderRadius="50% 25% 10% 0"
                 overflow='hidden'
               >

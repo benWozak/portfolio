@@ -7,6 +7,8 @@ import {
   Heading,
   Icon,
   useColorMode,
+  Image,
+  Box
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import ReactMarkdown from 'react-markdown'
@@ -16,8 +18,6 @@ import {
   TypescriptIcon,
   MongoIcon,
   NodeIcon,
-  // AndroidIcon,
-  // AppleIcon,
   CssIcon,
 } from 'assets/icons'
 
@@ -113,10 +113,51 @@ export const About = (props: Props) => {
         w="100%"
         justify="center"
         alignItems="flex-start"
-        direction="row"
+        direction={{base: "row", sm: "column", md: 'row'}}
+        // direction="column"
         gap="2"
         mt="1rem"
       >
+        <Flex 
+          w={{
+            sm: '100%',
+            md: '24rem',
+            lg: '57rem',
+          }}
+          h={{ sm: '34rem', md: '44rem', lg: '44rem' }}
+          gap="1rem" 
+          overflow='hidden'
+          display={{base: 'block', xs:'block', sm: 'block', md: 'none'}}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+              <Box 
+                pt="2rem"
+                background="mainColor"
+                borderRadius={{base: "50% 25% 10% 0", sm: '40% 40% 20% 20%'}}
+                overflow='hidden'
+                w={{ base: '100%' }}
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3}}
+                >
+                  <Image 
+                      boxSize='40rem'
+                      objectFit='contain'
+                      src='/img/heroImage.png' 
+                      alt="Ben Wozak"
+                    />
+                </motion.div>
+              </Box>
+            </motion.div>
+        </Flex>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

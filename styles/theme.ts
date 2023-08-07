@@ -8,6 +8,7 @@ const theme = extendTheme({
   initialColorMode: 'dark',
   useSystemColorMode: false,
   breakpoints: {
+    xs: '16em',
     sm: '30em', // 480px
     md: '48em', // 768px
     lg: '62em', // 992px
