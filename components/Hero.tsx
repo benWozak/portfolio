@@ -83,7 +83,8 @@ export const Hero = (props: Props) => {
             </motion.div>
           </Flex>
           <Link
-            // href='#projects'
+            href='/BW_Resume.pdf'
+            target = "_blank"
             _hover={{ textDecoration: 'none' }}
             w='15rem'
             alignSelf={{ base: 'center', sm: 'unset' }}
