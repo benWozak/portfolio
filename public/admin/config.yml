@@ -84,3 +84,44 @@ collections:
               widget: 'boolean',
               default: false,
             }
+      - label: 'Projects'
+        name: 'projects'
+        file: 'content/projects.md'
+        fields:
+          - label: 'Projects'
+            name: 'project'
+            widget: list
+            fields:
+              - {
+                  label: 'Title',
+                  name: 'title',
+                  widget: 'string',
+                }
+              - {
+                  label: 'Description',
+                  name: 'description',
+                  widget: 'text',
+                }
+              - {
+                  label: 'Tech Stack',
+                  name: 'techStack',
+                  widget: 'list',
+                  field: { label: Item, name: item, widget: string },
+                }
+              - {
+                  label: 'Live Link',
+                  name: 'liveLink',
+                  widget: 'text',
+                }
+              - {
+                  label: 'Code Link',
+                  name: 'codeLink',
+                  widget: 'text',
+                }
+               - {
+                  label: 'Image',
+                  name: 'image',
+                  widget: 'image',
+                  media_folder: public/img,
+                  public_folder: img,
+                }
