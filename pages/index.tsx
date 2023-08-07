@@ -6,7 +6,7 @@ import { NextPage, GetStaticProps } from 'next'
 import { Navbar, MobileNavbar } from 'components/Navbar'
 import { Hero } from 'components/Hero'
 import { About } from 'components/About'
-// import { Projects } from 'components/Projects'
+import { Projects } from 'components/Projects'
 import { Experience } from 'components/Experience'
 import { Contact } from 'components/Contact'
 
@@ -76,7 +76,7 @@ const Home: NextPage<Props> = (props: Props) => {
         <MobileNavbar />
         <Hero content={hero.attributes} />
         <About content={about.attributes} />
-        {/* <Projects /> */}
+        <Projects />
         <Experience content={experience.attributes} />
         <Contact />
       </Flex>

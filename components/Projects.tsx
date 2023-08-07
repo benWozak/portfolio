@@ -1,44 +1,18 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, Heading } from '@chakra-ui/react'
 
-import TailcastImage from '../assets/images/placeholder.png'
-import CoinstackImage from '../assets/images/placeholder.png'
-import InnovateImage from '../assets/images/placeholder.png'
-import FoodhubImage from '../assets/images/placeholder.png'
+import PortfolioImage from '../assets/images/portfolio_pre.png'
 import { ProjectItem } from './ProjectItem'
 import { SectionTitle } from './SectionTitle'
 import { NavAnchor } from './NavAnchor'
 
 const projectsData = [
   {
-    title: 'Tailcast',
-    desc: 'Dark themed website template built on AstroJS, designed for SaaS startup.',
-    techStack: 'Astro, React, Tailwind',
-    liveLink: '',
-    codeLink: '',
-    image: TailcastImage,
-  },
-  {
-    title: 'InnoVate',
-    desc: 'Website for interior design company, created using client-first design rules',
-    techStack: 'Webflow',
-    liveLink: '',
-    previewLink: '',
-    image: InnovateImage,
-  },
-  {
-    title: 'GreenHub',
-    desc: 'Healthy and organic food restaurant website with lots of images and vivid color palette',
-    techStack: 'HTML, CSS, JS, Shuffle.dev',
-    liveLink: '',
-    image: FoodhubImage,
-  },
-  {
-    title: 'PaySafeNow',
-    desc: 'Example of a website template for a startup that offers safe online payment solutions',
-    techStack: 'Webflow',
-    liveLink: '',
-    image: CoinstackImage,
-    isLight: true,
+    title: 'Portfolio',
+    desc: 'My developer portfolio.',
+    techStack: ['NextJS', 'Typescript', 'Chakra-UI', 'DecapCMS'],
+    liveLink: 'https://benwozak.netlify.app/',
+    codeLink: 'https://github.com/benWozak/portfolio',
+    image: PortfolioImage,
   },
 ]
 
@@ -46,8 +20,8 @@ export const Projects = () => {
   return (
     <>
       <NavAnchor id="projects" />
-      <SectionTitle title="My recent projects" />
-      <Flex w="100%" justify="center" alignItems="center" mt="1.5rem" mb="2rem">
+      <SectionTitle title="Projects" />
+      <Flex w="100%" direction="column" justify="center" alignItems="center" mt="1.5rem" mb="12rem">
         <Flex
           w="100%"
           wrap="nowrap"
@@ -60,6 +34,19 @@ export const Projects = () => {
           {projectsData.map((project, index) => (
             <ProjectItem {...project} key={project.title} index={index} />
           ))}
+        </Flex>
+        <Flex w="100%" justify="center" alignItems="center" mt="4.5rem">
+          <Flex
+            w={{ base: '2rem', md: '3rem' }}
+            h="1px"
+            bg="accentColor"
+          />
+            <Heading as="h4" mx="2rem">More On The Way</Heading>
+          <Flex
+            w={{ base: '2rem', md: '3rem' }}
+            h="1px"
+            bg="accentColor"
+          />
         </Flex>
       </Flex>
     </>

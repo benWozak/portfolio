@@ -62,11 +62,11 @@ export const Navbar = () => {
       path: '#about',
       isActive: activeItem === 'about',
     },
-    // {
-    //   text: 'Projects',
-    //   path: '#projects',
-    //   isActive: activeItem === 'projects',
-    // },
+    {
+      text: 'Projects',
+      path: '#projects',
+      isActive: activeItem === 'projects',
+    },
     {
       text: 'Experience',
       path: '#experience',
@@ -225,11 +225,11 @@ export const MobileNavbar = () => {
       path: '#about',
       onClick: () => setIsOpen(false),
     },
-    // {
-    //   text: 'Projects',
-    //   path: '#projects',
-    //   onClick: () => setIsOpen(false),
-    // },
+    {
+      text: 'Projects',
+      path: '#projects',
+      onClick: () => setIsOpen(false),
+    },
     {
       text: 'Experience',
       path: '#experience',
