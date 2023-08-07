@@ -48,3 +48,28 @@ export const SectionTitle = ({ title }: SectionTitleProps) => {
     </motion.div>
   )
 }
+
+export const SectionSubTitle = ({ title }: SectionTitleProps) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+        <Flex w="100%" justify="center" alignItems="center" mt="4.5rem">
+          <Flex
+            w={{ base: '2rem', md: '3rem' }}
+            h="1px"
+            bg="accentColor"
+          />
+            <Heading as="h4" mx="2rem">{title}</Heading>
+          <Flex
+            w={{ base: '2rem', md: '3rem' }}
+            h="1px"
+            bg="accentColor"
+          />
+        </Flex> 
+    </motion.div>
+  )
+}

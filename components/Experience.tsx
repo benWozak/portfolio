@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { NavAnchor } from './NavAnchor'
-import { SectionTitle } from './SectionTitle'
+import { SectionTitle } from './Titles'
 import { useWindowSize } from 'utils/hooks'
 import { FaAngleDoubleRight } from 'react-icons/fa'
 

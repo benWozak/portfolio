@@ -1,6 +1,6 @@
 import { Flex, Heading } from '@chakra-ui/react'
 import { ProjectItem } from './ProjectItem'
-import { SectionTitle } from './SectionTitle'
+import { SectionTitle, SectionSubTitle } from './Titles'
 import { NavAnchor } from './NavAnchor'
 
 type Project = {
@@ -17,7 +17,6 @@ interface Props {
 }
 
 export const Projects = ({ content }: Props) => {
-  console.log(content.projects)
   return (
     <>
       <NavAnchor id="projects" />
@@ -36,19 +35,7 @@ export const Projects = ({ content }: Props) => {
             <ProjectItem {...project} key={project.title} index={index} />
           ))}
         </Flex>
-        <Flex w="100%" justify="center" alignItems="center" mt="4.5rem">
-          <Flex
-            w={{ base: '2rem', md: '3rem' }}
-            h="1px"
-            bg="accentColor"
-          />
-            <Heading as="h4" mx="2rem">More On The Way</Heading>
-          <Flex
-            w={{ base: '2rem', md: '3rem' }}
-            h="1px"
-            bg="accentColor"
-          />
-        </Flex>
+        <SectionSubTitle title="More On The Way" />
       </Flex>
     </>
   )

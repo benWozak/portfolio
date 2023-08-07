@@ -21,7 +21,7 @@ import {
   CssIcon,
 } from 'assets/icons'
 
-import { SectionTitle } from './SectionTitle'
+import { SectionSubTitle, SectionTitle } from './Titles'
 import { NavAnchor } from './NavAnchor'
 import { useWindowSize } from 'utils/hooks'
 
@@ -75,7 +75,7 @@ export const About = (props: Props) => {
         }}
         h={{ base: 'unset', md: '20rem', lg: '23rem' }}
         borderWidth="1px"
-        borderColor="grayBorder"
+        borderColor="secondaryText"
         borderStyle="solid"
         borderRadius="15px"
         direction="column"
@@ -152,7 +152,7 @@ export const About = (props: Props) => {
                   transition={{ duration: 0.8, delay: 0.3}}
                 >
                   <Image 
-                      boxSize={ //Chakra UI breakpoints don't work with this property
+                      boxSize={ // Chakra UI breakpoints not working with this property
                         windowSize.width && windowSize.width < 1280 ? '30rem' : '40rem'
                       }
                       objectFit='contain'
@@ -171,7 +171,7 @@ export const About = (props: Props) => {
         >
           <Stack
             spacing={8}
-            direction={ //Chakra UI breakpoints don't work with this property
+            direction={ // Chakra UI breakpoints not working with this property
               windowSize.width && windowSize.width < 1280 ? 'column' : 'row'
             }
           >
@@ -217,6 +217,7 @@ export const About = (props: Props) => {
         direction="column"
         mb="10rem"
       >
+        <SectionSubTitle title="Areas of Expertise" />
         <Flex
           justify="center"
           alignItems="center"
