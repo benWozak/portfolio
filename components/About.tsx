@@ -113,7 +113,9 @@ export const About = (props: Props) => {
         w="100%"
         justify="center"
         alignItems="flex-start"
-        direction={{base: "row", sm: "column", md: 'row'}}
+        direction={ //Chakra UI breakpoints don't work with this property
+          windowSize.width && windowSize.width < 1280 ? 'column' : 'row'
+        }
         gap="2"
         mt="1rem"
       >
@@ -165,7 +167,7 @@ export const About = (props: Props) => {
         >
           <Stack
             spacing={8}
-            direction={
+            direction={ //Chakra UI breakpoints don't work with this property
               windowSize.width && windowSize.width < 1280 ? 'column' : 'row'
             }
           >
