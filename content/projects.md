@@ -1,7 +1,8 @@
 ---
 projects:
   - title: Portfolio
-    description: My developer portfolio.
+    description: A custom built web portal to showcase my public projects and
+      developer skill set.
     techStack:
       - NextJS
       - Typescript
