@@ -53,4 +53,36 @@ entries:
       - VueJS
       - Laravel(PHP)
       - DrupalCMS
+  - title: Sr Web Developer
+    employer: Flipp Advertising
+    employer_website: https://flippadvertising.com/
+    date: 11/2023 - present
+    location: Calgary AB Canada
+    summary: Flipp Advertising is an agency that offers marketing strategies, brand
+      identity and digital solutions.
+    description:
+      - Collaborated with designers and clients to ensure seamless integration
+        of visual and functional elements while actively participating in
+        project planning and agile development processes to manage multiple
+        projects simultaneously, ensuring timely delivery and adherence to
+        client specifications and brand guidelines.
+      - Spearheaded the adoption of a cutting-edge technology stack,
+        incorporating modern frameworks and tools to meet a client's unique
+        requirements, resulting in the development of one of the most advanced
+        web platforms in the client's industry.
+      - Conducted website performance optimization, including code minification,
+        image compression, and leveraging browser caching to enhance load times
+        and user experience, while also implementing SEO best practices to
+        improve site visibility and search engine rankings.
+    technologies:
+      - SCSS
+      - TypeScript
+      - JQuery
+      - Laravel
+      - Wordpress
+      - NextJS
+      - StrapiCMS
+      - MySQL
+      - AWS
+      - BitBucket
 ---
