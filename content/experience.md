@@ -33,7 +33,7 @@ entries:
       - AWS
       - BitBucket
   - title: Team Lead | Front-End Software Engineer
-    employer: chata.ai
+    employer: Chata Technologies Inc.
     date: 09/2019 – 11/2023
     location: Calgary AB, Canada
     description:
