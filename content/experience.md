@@ -8,19 +8,14 @@ entries:
     summary: Flipp Advertising is an agency that offers marketing strategies, brand
       identity and digital solutions.
     description:
-      - Collaborated with designers and clients to ensure seamless integration
-        of visual and functional elements while actively participating in
-        project planning and agile development processes to manage multiple
-        projects simultaneously, ensuring timely delivery and adherence to
-        client specifications and brand guidelines.
-      - Spearheaded the adoption of a cutting-edge technology stack,
-        incorporating modern frameworks and tools to meet a client's unique
-        requirements, resulting in the development of one of the most advanced
-        web platforms in the client's industry.
-      - Conducted website performance optimization, including code minification,
-        image compression, and leveraging browser caching to enhance load times
-        and user experience, while also implementing SEO best practices to
-        improve site visibility and search engine rankings.
+      - Led cross-functional collaboration in agile environment practices,
+        managing multiple projects to meet client specs, deadlines, and ongoing
+        maintenance.
+      - "  Designed and built scalable infrastructure from the ground up for an
+        industry-leading NextJS platform, supporting over 50,000 peak users each
+        year."
+      - Optimized website performance and SEO, significantly improving load
+        times and search rankings.
     technologies:
       - SCSS
       - TypeScript
@@ -37,15 +32,13 @@ entries:
     date: 09/2019 – 11/2023
     location: Calgary AB, Canada
     description:
-      - Led a team of four engineers in designing, developing, and maintaining
-        an internal web application for configuring and training custom machine
-        learning models.
-      - Designed and developed two API management portals for interfacing with
-        multiple SaaS solutions, a user portal, and an app extension for
-        Microsoft Teams, now used by hundreds of users.
-      - >-
-        
-        Facilitated regular guild meetings with front-end developers to discuss current technologies and establish uniform standards, leading to the company-wide adoption of TypeScript.
+      - "Led two 4-person teams: one developing an internal ML model
+        configuration web app, another creating AutoQL suite with chat
+        interface, dashboard, and notification system."
+      - Developed 2 API portals and Microsoft Teams extension, serving hundreds
+        of users across multiple SaaS platforms.
+      - Spearheaded company-wide TypeScript adoption and group code-reviews
+        through dev guild leadership.
     employer_website: https://chata.ai/
     summary: |-
       Chata’s flagship product AutoQL, uses Natural Language Processing to
@@ -67,16 +60,12 @@ entries:
       - Redesigned a database management system utilizing a modern tech stack,
         supporting a wide array of features such as custom reporting and form
         creation tools.
-      - |-
-        Designed and developed a network graphing visualization tool to
-        help non-profits collaborate and connect with one another.
-      - Maintained a custom client site using DrupalCMS.
+      - Created network visualization tool for enhancing non-profit
+        collaboration.
+      - Managed and optimized custom DrupalCMS client site.
     employer_website: https://www.hellokrd.net/
-    summary: >-
-      KRD assists non-profit organizations in upgrading their strategy,
-      research,
-
-      and technology integrations.
+    summary: Modernized a database management system, integrating custom reporting
+      and form creation tools.
     technologies:
       - VueJS
       - Laravel(PHP)
