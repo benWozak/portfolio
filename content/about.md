@@ -8,7 +8,7 @@ description: >-
   [The Southern Alberta Institute of Technology](https://www.sait.ca/).
 
 
-  I﻿ was hired immediately out of graduation and have been working ever since. Currently, I am employed at [chata.ai](https://chata.ai/), where I contribute to a suite of tools and interfaces to interact with a line of proprietary Natural Language Processing AI/ML SaaS products.
+  I﻿ was hired immediately out of graduation and have been working ever since. With now over five years of professional experience crafting user-interfaces for B2B SaaS product and high traffic client-facing websites, **I am specialized in all things JavaScript, creating elegant user experiences for complex software solutions** with a proven track record leading cross-functional teams in fast paced environments.
 showFE: true
 showFS: true
 showMB: false
