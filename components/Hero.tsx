@@ -83,8 +83,7 @@ export const Hero = (props: Props) => {
             </motion.div>
           </Flex>
           <Link
-            href='/BW_Resume.pdf'
-            target = "_blank"
+            href='#contact'
             _hover={{ textDecoration: 'none' }}
             w='15rem'
             alignSelf={{ base: 'center', sm: 'unset' }}
@@ -96,7 +95,7 @@ export const Hero = (props: Props) => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <ActionButton text='View Resume' />
+              <ActionButton text='Get in contact' />
             </motion.div>
           </Link>
         </Flex>
