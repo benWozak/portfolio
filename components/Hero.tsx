@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { ActionButton } from './buttons/ActionButton'
 import { NavAnchor } from './NavAnchor'
 
-
 interface Props {
   content: any
 }
@@ -31,8 +30,8 @@ export const Hero = (props: Props) => {
         pb={{ base: '5rem', xl: '2rem' }}
         pl={{ base: '2%', md: '2%', '2xl': '12vw' }}
       >
-        <Flex 
-          direction="column" 
+        <Flex
+          direction="column"
           w={{
             sm: '44rem',
             md: '44rem',
@@ -58,8 +57,13 @@ export const Hero = (props: Props) => {
               <Text
                 as="h1"
                 variant="titlePrimary"
-                fontSize={{ base: '5rem', sm: '4rem', md: '5.5rem', xl: '5.8rem' }}
-                lineHeight={{ base: "84px", sm: '60px', md: '84px'}}
+                fontSize={{
+                  base: '5rem',
+                  sm: '4rem',
+                  md: '5.5rem',
+                  xl: '5.8rem',
+                }}
+                lineHeight={{ base: '84px', sm: '60px', md: '84px' }}
               >
                 {content.hero_title}
               </Text>
@@ -83,9 +87,9 @@ export const Hero = (props: Props) => {
             </motion.div>
           </Flex>
           <Link
-            href='#contact'
+            href="#contact"
             _hover={{ textDecoration: 'none' }}
-            w='15rem'
+            w="15rem"
             alignSelf={{ base: 'center', sm: 'unset' }}
             mr={{ base: '1rem', sm: 'unset' }}
           >
@@ -95,21 +99,21 @@ export const Hero = (props: Props) => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <ActionButton text='Get in contact' />
+              <ActionButton text="Contact Me" />
             </motion.div>
           </Link>
         </Flex>
-        <Flex 
-          direction="column" 
+        <Flex
+          direction="column"
           w={{
             sm: '28rem',
             md: '24rem',
             lg: '57rem',
           }}
           h={{ sm: '34rem', md: '44rem', lg: '44rem' }}
-          gap="1rem" 
-          overflow='hidden'
-          display={{base: 'block', xs:'none', sm: 'none', md: 'block'}}
+          gap="1rem"
+          overflow="hidden"
+          display={{ base: 'block', xs: 'none', sm: 'none', md: 'block' }}
         >
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -117,27 +121,27 @@ export const Hero = (props: Props) => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-              <Box 
-                pt="2rem"
-                background="mainColor"
-                borderRadius="50% 25% 10% 0"
-                overflow='hidden'
+            <Box
+              pt="2rem"
+              background="mainColor"
+              borderRadius="50% 25% 10% 0"
+              overflow="hidden"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.3}}
-                >
-                  <Image 
-                      boxSize='40rem'
-                      objectFit='contain'
-                      src='/img/heroImage.png' 
-                      alt="Ben Wozak"
-                    />
-                </motion.div>
-              </Box>
-            </motion.div>
+                <Image
+                  boxSize="40rem"
+                  objectFit="contain"
+                  src="/img/heroImage.png"
+                  alt="Ben Wozak"
+                />
+              </motion.div>
+            </Box>
+          </motion.div>
         </Flex>
       </Flex>
     </Flex>
