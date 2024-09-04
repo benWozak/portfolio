@@ -13,8 +13,11 @@ projects:
     image: img/portfolio_pre.png
   - liveLink: https://resume-template-viewer.vercel.app/
     title: Resume Template Viewer
-    description: A tool for me to store and display custom resume templates built
-      using [LaTex](https://www.overleaf.com/learn)
+    description: >-
+      A tool for me to store and display custom resume templates built using
+      [LaTex](https://www.overleaf.com/learn)
+
+      <a href="https://www.overleaf.com/learn">LaTeX</a>
     techStack:
       - NextJS
       - Tailwind
