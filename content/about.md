@@ -1,14 +1,18 @@
 ---
 photo: img/me-pro.jpg
 description: >-
-  My journey as a **Software Developer** started in 2016. I decided to leave my
-  career in the culinary industry behind and pursue something more in-line with
-  my values. I wanted to solve complex problems and utilize my skills
-  meaningfully. This led me to discover a passion for front-end development at
-  [The Southern Alberta Institute of Technology](https://www.sait.ca/).
+  I am a **Software Developer** with now over five years of professional
+  experience crafting user-interfaces for B2B SaaS product and high traffic
+  client-facing websites, **I am specialized in all things JavaScript, creating
+  elegant user experiences for complex software solutions** with a proven track
+  record leading cross-functional teams in fast paced environments.\
+
+  \
+
+  Driven by a passion for coding excellence, I thrive on pushing the boundaries of what's possible in web development. I'm an active contributor to the global software community, believing in the power of collaboration to accelerate innovation.
 
 
-  I﻿ was hired immediately out of graduation and have been working ever since. With now over five years of professional experience crafting user-interfaces for B2B SaaS product and high traffic client-facing websites, **I am specialized in all things JavaScript, creating elegant user experiences for complex software solutions** with a proven track record leading cross-functional teams in fast paced environments.
+  Always eager to embrace new technologies, I try to stay at the forefront of web development trends to deliver state-of-the-art solutions for clients and users alike.
 showFE: true
 showFS: true
 showMB: false
