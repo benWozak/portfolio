@@ -1,9 +1,12 @@
 ---
 projects:
   - liveLink: https://resume-template-viewer.vercel.app/
-    title: Resume Template Viewer
-    description: A tool for me to store and display custom resume templates built
-      using the LaTeX scripting language
+    title: Resume Template Kit
+    description: I wasn't satisfied with most word based Resume templates, and
+      services like Adobe and Canva are often challenging to customize and are
+      not ATS friendly. So I wrote my own resume by using the LaTeX scripting
+      language, and built a tool for myself to host the PDF version and manage
+      it's content over time.
     techStack:
       - NextJS
       - Tailwind
