@@ -9,7 +9,8 @@ projects:
       it's content over time.
     techStack:
       - NextJS
-      - Tailwind
+      - TypeScript
+      - TailwindCSS
       - DrizzleORM
       - Postgres
       - LaTeX
