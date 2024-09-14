@@ -95,6 +95,7 @@ export const ProjectItem = ({
             alt="project image"
             sx={{
               aspectRatio: 16 / 9,
+              objectFit: 'cover',
             }}
           />
         </motion.div>
